@@ -1,0 +1,167 @@
+.head {
+    width:100%;
+    height:110px;
+
+    box-shadow:0 2px 10px 0 #C8C5C5;
+}
+.head .left{
+    float:left;
+    margin-left:100px;
+    margin-top:30px;
+    font-size: 25px;
+
+
+}
+.head .right{
+    float:right;
+    margin-top: 50px;
+    margin-right:150px;
+    color:#999;
+}
+.content{
+    margin: 0 auto;
+    position: relative;
+}
+.content .span1{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height:30px;
+    background-color: green;
+    border-radius: 50%;
+    left:40%;
+    top:50px;
+    color:white;
+    text-align:center;
+    line-height: 30px;
+}
+.content .span1:after{
+    content: "验证手机号";
+    width:100px;
+    position: absolute;
+    left:-36px;
+    display: block;
+    color:green;
+
+}
+.content .span2{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height:30px;
+    background-color: green;
+    border-radius: 50%;
+    left:50%;
+    top:50px;
+    color:white;
+    text-align:center;
+    line-height: 30px;
+
+}
+.content .span2:after{
+    content: "填写账号信息";
+    width:100px;
+    position: absolute;
+    left:-36px;
+    display: block;
+    color:green;
+
+}
+.content .span4{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height:30px;
+    background-color: green;
+    border-radius: 50%;
+    left:60%;
+    top:50px;
+    color:white;
+    text-align:center;
+    line-height: 30px;
+
+}
+.content .span4:after{
+    content: "填写账号信息";
+    width:100px;
+    position: absolute;
+    left:-36px;
+    display: block;
+    color:green;
+
+}
+.content .span3{
+
+    position: absolute;
+    border-radius: 50%;
+    left:43%;
+    font-size:20px;
+    top:50px;
+    color:grey;
+    text-align:center;
+    line-height: 30px;
+}
+.content .span5{
+
+    position: absolute;
+    border-radius: 50%;
+    left:53%;
+    font-size:20px;
+    top:50px;
+    color:grey;
+    text-align:center;
+    line-height: 30px;
+}
+.inpu{
+    width: 600px;
+    height:100px;
+    // position:absolute;
+    margin: 0 auto;
+    line-height:100px;
+    margin-top:160px;
+}
+.inpu .cars{
+    width:97px;
+    height:45px;
+    border:solid 1px #ddd;
+}
+.inpu input{
+    width:260px;
+    height:40px;
+    border:solid 1px #ddd;
+    position:relative;
+    top:-2px;
+    left:-8px;
+}
+.zhong{
+    width:360px;
+    height:44px;
+    border:solid 1px #ddd;
+    line-height:44px;
+
+}
+.a{
+    display:block;
+    margin-top:20px;
+    width:360px;
+    height:44px;
+    border:solid 1px #ddd;
+    line-height:44px;
+    background-color:red;
+    color:white;
+
+}
+#form{
+    position:relative;
+    top:120px;
+}
+#form input{
+    text-align:center;
+    width:360px;
+    height:32px;
+    border:2px solid grey;
+    border-radius:33px;
+    color:#999;
+    margin-bottom: 5px;
+
+}

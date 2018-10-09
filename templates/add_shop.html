@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>添加货物信息</title>
+</head>
+<body>
+<center>
+    <form method="post" enctype="multipart/form-data" action="http://localhost:8000/add_goods">
+        <input type="text" name="price" placeholder="单价"><br>
+        <input type="text" name="s_name" placeholder="商品名称"><br>
+        <input type="text" name="s_desc" placeholder="商品描述"><br>
+        <input type="file" name="img"><br>
+        <input type="submit" value="提交">
+
+    </form>
+    <table border="1" width="400">
+
+
+                <caption></caption>
+                <tbody>
+                <tr>
+                        <td>ID</td><td>姓名</td><td>性别</td><td>年龄</td><td>密码</td>
+                    <td>删除?</td><td>修改?</td></tr>
+                    {% for i in list %}
+
+                        <tr>
+                        <td name="idd">{{ i.id1 }}</td>
+                        <td contenteditable="true" name='name'>{{ i.id1 }}</td>
+                        <td contenteditable="true" name='sex'>{{ i.id2 }}</td>
+                        <td contenteditable="true" name='age'><img src="{{ i.id3 }}"></td>
+                        <!-- <td contenteditable="true" name='age'>{{ i.id3 }}</td> -->
+                        <td contenteditable="true" name='pwd'>{{ i.id4 }}</td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+</center>
+</body>
+</html>

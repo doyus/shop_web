@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>京东首页</title>
+    <link rel="stylesheet" type="text/css" href="\static\css\style.css">
+    <script src='\static\js\style.js'></script>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+</script>
+</head>
+<body>
+<div class="wra">
+<div class="content">
+    <div class="header">
+        <div class="top">
+            <span style="padding-left:50px">送至:北京&nbsp;v</span>
+            <ul class="top_right">
+                <li><a href="sign">您好，{{ doname }}</a><span style="color:red"></span></li>
+                <!-- <li>
+                    <a href="login"
+                style="color:red;text-decoration: none;">免费注册</a>
+                </li> -->
+                <li><a href="my_info?userN={{ doname }}">我的京东</a>
+
+                </li>
+
+                <li>我的订单&nbsp;v<ul>
+                  <li><a href="#">1111</a></li>
+                  <li><a href="#">2222</a></li>
+                  <li><a href="#">1212</a></li>
+                </ul></li>
+                <li>京东会员</li>
+                <li>企业采购</li>
+                <li><img src="\static\img\menu-img1.png" alt="">&nbsp;手机京东</li>
+                <li>关注京东&nbsp;v</li>
+                <li>客户服务&nbsp;v</li>
+                <li>网站导航&nbsp;v</li>
+                <li>
+                    <a href="#"
+                style="color:red;text-decoration: none;" onclick="clearCookie()">退出登陆</a>
+                </li>
+            </ul>
+        </div>
+        <div class="middle">
+            <div class="middle_left"><img src="\static\img\logo.png" alt="" /></div>
+            <div class="middle_middle">
+            <form action="search" method="get" accept-charset="utf-8">
+                <input type="text" name="nam" value="{{ doname }}" style="display:none;">
+                <input type="text" name="keywords"/><input type="submit" name="" style="width:50px;height:35px;background-color:#B43E3E;color:white;display: block;float:right;margin-right:100px;line-height: 35px;text-align:center;font-size: 18px;cursor:pointer;" value='搜索'>
+            </form>
+
+            <div>
+            </div>
+            <ul class="middle_x">
+                    <li style="color:red;">199减100</li>
+                    <li>69元秒风扇</li>
+                    <li>一元免邮</li>
+                    <li>低至9.9</li>
+                    <li>啤酒趴</li>
+                    <li>豆浆机</li>
+                    <li>男生帆布鞋</li>
+                    <li>0元使用</li>
+                    <li>女士香水</li>
+                </ul>
+
+            </div>
+            <div class="middle_y"><img src="" alt=""><a href="gouwu?name2={{ doname }}">我的购物车</a><img class="a" src="\static\img\cart-num.png" alt="" /></div>
+        </div>
+        <div class="bottom">
+            <span>全部商品分类</span>
+            <ul>
+                <li>服装城</li>
+                <li>美妆馆</li>
+                <li>京东超市</li>
+                <li>生鲜</li>
+                <li>全球购</li>
+                <li>闪购</li>
+                <li>团购</li>
+                <li>拍卖</li>
+                <li>金融</li>
+            </ul>
+            <div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="Middle">
+        <div class="Middle_left">
+            <ul class="Middle_l">
+                <li>家用电器<div>aaaa</div></li>
+                <li>手机、数码、京东通信<div></div></li>
+                <li>电脑、办公<div>bbb</div></li>
+                <li>家居、家具、家装，厨具<div>cccc</div></li>
+                <li>男装、女装、童装、内衣<div></div></li>
+                <li>个护化妆、清洁用品、宠物<div>dddd</div></li>
+                <li>鞋靴、箱包、珠宝、奢侈品<div>eeee</div></li>
+                <li>运动户外、钟表<div>ffff</div></li>
+                <li>汽车、汽车用品<div>ggggg</div></li>
+                <li>母婴、玩具乐器<div>hhhh</div></li>
+                <li>食品、酒类、生鲜、特产<div></div></li>
+                <li>医药保健<div></div></li>
+                <li>图书、音像、电子书<div></div></li>
+                <li>彩票、旅行、充值、票务<div></div></li>
+                <li>理财、众筹、白条、保险<div></div></li>
+
+            </ul>
+        </div>
+        <div class="Middle_middle">
+            <section class="slider-contaner">
+            <ul class="slider">
+            <li class="slider-item slider-item1"></li>
+            <li class="slider-item slider-item2"></li>
+            <li class="slider-item slider-item3"></li>
+            <li class="slider-item slider-item4"></li>
+            <li class="slider-item slider-item5"></li>
+            </ul>
+            <div class="focus-container">
+            <ul class="floatfix">
+            <li><div class="focus-item focus-item1" id="con1"></div></li>
+            <li><div class="focus-item focus-item2" id="con2"></div></li>
+            <li><div class="focus-item focus-item3" id="con3"></div></li>
+            <li><div class="focus-item focus-item4" id="con4"></div></li>
+            <li><div class="focus-item focus-item5" id="con5"></div></li>
+            </ul>
+            </div>
+            </section>
+        </div>
+        <div class="Middle_right">
+            <span>京东快报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多></span>
+            <ul class="right_top">
+                <li><b>【特惠】</b>三亚狂欢季</li>
+                <li><b>【公告】</b>京东最新捐赠物资抵达抗洪前线</li>
+                <li><b>【特惠】</b>自营文具风暴满199减100</li>
+                <li><b>【公告】</b>抢险不停歇，京东在行动</li>
+                <li><b>【特惠】</b>每日想折扣京东品质游</li>
+            </ul>
+            <ul class="right_middle">
+                <li><img src="\static\img\menu-img1.png" alt=""><span>话费</span></li>
+                <li><img src="\static\img\menu-img2.png" alt=""><span>机票</span></li>
+                <li><img src="\static\img\menu-img3.png" alt=""><span>电影票</span></li>
+                <li><img src="\static\img\menu-img4.png" alt=""><span>游戏</span></li>
+                <li><img src="\static\img\menu-img5.png" alt=""><span>彩票</span></li>
+                <li><img src="\static\img\menu-img6.png" alt=""><span>加油卡</span></li>
+                <li><img src="\static\img\menu-img7.png" alt=""><span>酒店</span></li>
+                <li><img src="\static\img\menu-img8.png" alt=""><span>火车票</span></li>
+                <li><img src="\static\img\menu-img9.png" alt=""><span>众筹</span></li>
+                <li><img src="\static\img\menu-img10.png" alt=""><span>理财</span></li>
+                <li><img src="\static\img\menu-img11.png" alt=""><span>礼品卡</span></li>
+                <li><img src="\static\img\menu-img12.png" alt=""><span>白条</span></li>
+            </ul>
+            <img src="\static\img\img-menu-bottom.jpg" alt="">
+
+        </div>
+
+        </div>
+    <div class="Middle_two">
+        <span class="Mid_left">
+            <img src="\static\img\tuijian-1.png" alt="">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="\static\img\tuijian-2.jpg" alt="" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="\static\img\tuijian-3.jpg" alt="" />
+
+            <img src="\static\img\tuijian-4.jpg" alt="" />
+
+        </span>
+    </div>
+    <div class="guess_love">
+        <div style="font-size:24px;clear:both;margin-left:170px;margin-bottom:4px;position:relative;top:23px;">
+            猜你喜欢
+        </div>
+        <span class="Mid_left">
+            <img src="\static\img\light-1.jpg" alt="">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="\static\img\light-2.jpg" alt="" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="\static\img\light-3.jpg" alt="" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="\static\img\light-4.jpg" alt="" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="\static\img\light-5.jpg" alt="" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="\static\img\light-6.jpg" alt="" />
+
+        </span>
+        <div style="font-size:24px;clear:both;margin-left:170px;margin-bottom:4px;position:relative;top:23px;">
+            京东品质生活
+        </div>
+        <span class="Mid_left1">
+            <div class="shangbiao">
+                <span class="pingzhi">新发现</span>
+                <span class="pingzhi">好东西</span>
+                <span class="pingzhi">品牌街</span>
+            </div>
+
+            <div class="x">
+                <div class="zi">
+                    <h4>新尚品</h4>
+                    <p>锂电池跨车</p>
+                    <p style="color:red;">新品下单送￥445豪礼</p>
+                </div>
+                <img src="\static\img\life-img1.jpg" alt="">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="zi1">
+                    <h4>达人推荐</h4>
+                    <p>新人豪礼</p>
+                    <p style="color:red;">荣耀新品低至230</p>
+                </div>
+                <img src="\static\img\life-img2.jpg" alt="" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="zi2">
+                    <h4>发现好物</h4>
+                    <p>防嗮紫外线</p>
+                    <p style="color:red;">京东白条323</p>
+                </div>
+                <img src="\static\img\life-img3.jpg" alt="" />
+                <!-- <div class="itema"></div>
+                <div class="itemb"></div>
+                <div class="itemc"></div> -->
+            </div>
+
+
+
+        </span>
+        <div class="right">
+                <img src="\static\img\shangbiao-1.jpg" alt="" />
+                <img src="\static\img\shangbiao-2.jpg" alt="" />
+                <img src="\static\img\shangbiao-3.jpg" alt="" />
+                <img src="\static\img\shangbiao-4.jpg" alt="" />
+                <img src="\static\img\shangbiao-5.jpg" alt="" />
+                <img src="\static\img\shangbiao-6.jpg" alt="" />
+                <img src="\static\img\shangbiao-7.jpg" alt="" />
+                <img src="\static\img\shangbiao-8.jpg" alt="" />
+                <img src="\static\img\shangbiao-9.jpg" alt="" />
+                <img src="\static\img\shangbiao-10.jpg" alt="" />
+                <img src="\static\img\shangbiao-11.jpg" alt="" />
+                <img src="\static\img\shangbiao-12.jpg" alt="" />
+                <img src="\static\img\shangbiao-13.jpg" alt="" />
+                <img src="\static\img\shangbiao-14.jpg" alt="" />
+            </div>
+
+    </div>
+    <div style="clear:both;"></div>
+<div id="calc">
+    <ul id="ul">
+        <li>1F<span>服饰</span></li>
+        <li>2F<span>美妆</span></li>
+        <li>3F<span>手机</span></li>
+        <li>4F<span>家电</span></li>
+        <li>5F<span>数码</span></li>
+        <li>6F<span>服务</span></li>
+        <li>7F<span>图书</span></li>
+        <li>8F<span>母婴</span></li>
+    </ul>
+</div>
+    <div class="fl">
+        <div class="floor1">
+            <div class="h2">
+                <span style="display:block;float:left;font-size:23px;margin-top:10px;margin-left:-180px;"><span style="color:red;">1F</span>服装鞋包</span>
+            </div>
+
+            <ul>
+                <li>大牌</li>
+                <li>男装</li>
+                <li>女装</li>
+                <li>鞋靴</li>
+                <li>箱包</li>
+                <li>内衣配饰</li>
+                <li>珠宝首饰</li>
+                <li>奢侈礼品</li>
+                <li>奢华腕表</li>
+            </ul>
+            <div style="clear:both;"></div>
+            <div class="tu">
+                <div class="left1" style="width:266px;float:left;">
+                    <img src="\static\img\img-flash-1.jpg" alt="">
+                    <img src="\static\img\flash-bottom.jpg" alt="" />
+                </div>
+                <div class="left2" style="width:355px;float:left;overflow:hidden;">
+                    <img src="\static\img\table-1.jpg">
+                    <img src="\static\img\LTloopshow-1.jpg" style="">
+                    <img src="\static\img\table-8.jpg" alt="">
+                </div>
+                <div class="left3" style="width:460px;float:right;padding-left:15px;">
+                    <img src="\static\img\table-2.jpg" alt="">
+                    <img src="\static\img\table-3.jpg" alt="">
+                    <img src="\static\img\table-4.jpg" alt="">
+                    <img src="\static\img\table-5.jpg" alt="">
+                    <img src="\static\img\table-6.jpg" alt="">
+                    <img src="\static\img\table-7.jpg" alt="">
+                </div>
+                <div style="clear:both;">
+
+                </div>
+                <div class="left4">
+                    <img src="\static\img\onefloor-bottom-1.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-2.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-3.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-4.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-5.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-6.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-7.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-8.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-9.jpg" alt="">
+                    <!-- <img src="\static\img\onefloor-bottom-10.jpg" alt=""> -->
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div><br />
+    <br />
+    <br />
+    <div class="fl">
+        <div class="floor1">
+            <div class="h2">
+                <span style="display:block;float:left;font-size:23px;margin-top:10px;margin-left:-180px;"><span style="color:red;">2F</span>服装鞋包</span>
+            </div>
+
+            <ul>
+                <li>大牌</li>
+                <li>男装</li>
+                <li>女装</li>
+                <li>鞋靴</li>
+                <li>箱包</li>
+                <li>内衣配饰</li>
+                <li>珠宝首饰</li>
+                <li>奢侈礼品</li>
+                <li>奢华腕表</li>
+            </ul>
+            <div style="clear:both;"></div>
+            <div class="tu">
+                <div class="left1" style="width:266px;float:left;">
+                    <img src="\static\img\img-flash-1.jpg" alt="">
+                    <img src="\static\img\flash-bottom.jpg" alt="" />
+                </div>
+                <div class="left2" style="width:355px;float:left;overflow:hidden;">
+                    <img src="\static\img\table-1.jpg">
+                    <img src="\static\img\LTloopshow-1.jpg" style="">
+                    <img src="\static\img\table-8.jpg" alt="">
+                </div>
+                <div class="left3" style="width:460px;float:right;padding-left:15px;">
+                    <img src="\static\img\table-2.jpg" alt="">
+                    <img src="\static\img\table-3.jpg" alt="">
+                    <img src="\static\img\table-4.jpg" alt="">
+                    <img src="\static\img\table-5.jpg" alt="">
+                    <img src="\static\img\table-6.jpg" alt="">
+                    <img src="\static\img\table-7.jpg" alt="">
+                </div>
+                <div style="clear:both;">
+
+                </div>
+                <div class="left4">
+                    <img src="\static\img\onefloor-bottom-1.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-2.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-3.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-4.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-5.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-6.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-7.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-8.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-9.jpg" alt="">
+                    <!-- <img src="\static\img\onefloor-bottom-10.jpg" alt=""> -->
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div><br />
+    <br />
+    <br />
+    <div class="fl">
+        <div class="floor1">
+            <div class="h2">
+                <span style="display:block;float:left;font-size:23px;margin-top:10px;margin-left:-180px;"><span style="color:red;">3F</span>服装鞋包</span>
+            </div>
+
+            <ul>
+                <li>大牌</li>
+                <li>男装</li>
+                <li>女装</li>
+                <li>鞋靴</li>
+                <li>箱包</li>
+                <li>内衣配饰</li>
+                <li>珠宝首饰</li>
+                <li>奢侈礼品</li>
+                <li>奢华腕表</li>
+            </ul>
+            <div style="clear:both;"></div>
+            <div class="tu">
+                <div class="left1" style="width:266px;float:left;">
+                    <img src="\static\img\img-flash-1.jpg" alt="">
+                    <img src="\static\img\flash-bottom.jpg" alt="" />
+                </div>
+                <div class="left2" style="width:355px;float:left;overflow:hidden;">
+                    <img src="\static\img\table-1.jpg">
+                    <img src="\static\img\LTloopshow-1.jpg" style="">
+                    <img src="\static\img\table-8.jpg" alt="">
+                </div>
+                <div class="left3" style="width:460px;float:right;padding-left:15px;">
+                    <img src="\static\img\table-2.jpg" alt="">
+                    <img src="\static\img\table-3.jpg" alt="">
+                    <img src="\static\img\table-4.jpg" alt="">
+                    <img src="\static\img\table-5.jpg" alt="">
+                    <img src="\static\img\table-6.jpg" alt="">
+                    <img src="\static\img\table-7.jpg" alt="">
+                </div>
+                <div style="clear:both;">
+
+                </div>
+                <div class="left4">
+                    <img src="\static\img\onefloor-bottom-1.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-2.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-3.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-4.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-5.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-6.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-7.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-8.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-9.jpg" alt="">
+                    <!-- <img src="\static\img\onefloor-bottom-10.jpg" alt=""> -->
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div><br />
+    <br />
+    <br />
+    <div class="fl">
+        <div class="floor1">
+            <div class="h2">
+                <span style="display:block;float:left;font-size:23px;margin-top:10px;margin-left:-180px;"><span style="color:red;">4F</span>服装鞋包</span>
+            </div>
+
+            <ul>
+                <li>大牌</li>
+                <li>男装</li>
+                <li>女装</li>
+                <li>鞋靴</li>
+                <li>箱包</li>
+                <li>内衣配饰</li>
+                <li>珠宝首饰</li>
+                <li>奢侈礼品</li>
+                <li>奢华腕表</li>
+            </ul>
+            <div style="clear:both;"></div>
+            <div class="tu">
+                <div class="left1" style="width:266px;float:left;">
+                    <img src="\static\img\img-flash-1.jpg" alt="">
+                    <img src="\static\img\flash-bottom.jpg" alt="" />
+                </div>
+                <div class="left2" style="width:355px;float:left;overflow:hidden;">
+                    <img src="\static\img\table-1.jpg">
+                    <img src="\static\img\LTloopshow-1.jpg" style="">
+                    <img src="\static\img\table-8.jpg" alt="">
+                </div>
+                <div class="left3" style="width:460px;float:right;padding-left:15px;">
+                    <img src="\static\img\table-2.jpg" alt="">
+                    <img src="\static\img\table-3.jpg" alt="">
+                    <img src="\static\img\table-4.jpg" alt="">
+                    <img src="\static\img\table-5.jpg" alt="">
+                    <img src="\static\img\table-6.jpg" alt="">
+                    <img src="\static\img\table-7.jpg" alt="">
+                </div>
+                <div style="clear:both;">
+
+                </div>
+                <div class="left4">
+                    <img src="\static\img\onefloor-bottom-1.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-2.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-3.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-4.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-5.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-6.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-7.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-8.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-9.jpg" alt="">
+                    <!-- <img src="\static\img\onefloor-bottom-10.jpg" alt=""> -->
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div><br />
+    <br />
+    <br />
+    <div class="fl">
+        <div class="floor1">
+            <div class="h2">
+                <span style="display:block;float:left;font-size:23px;margin-top:10px;margin-left:-180px;"><span style="color:red;">5F</span>服装鞋包</span>
+            </div>
+
+            <ul>
+                <li>大牌</li>
+                <li>男装</li>
+                <li>女装</li>
+                <li>鞋靴</li>
+                <li>箱包</li>
+                <li>内衣配饰</li>
+                <li>珠宝首饰</li>
+                <li>奢侈礼品</li>
+                <li>奢华腕表</li>
+            </ul>
+            <div style="clear:both;"></div>
+            <div class="tu">
+                <div class="left1" style="width:266px;float:left;">
+                    <img src="\static\img\img-flash-1.jpg" alt="">
+                    <img src="\static\img\flash-bottom.jpg" alt="" />
+                </div>
+                <div class="left2" style="width:355px;float:left;overflow:hidden;">
+                    <img src="\static\img\table-1.jpg">
+                    <img src="\static\img\LTloopshow-1.jpg" style="">
+                    <img src="\static\img\table-8.jpg" alt="">
+                </div>
+                <div class="left3" style="width:460px;float:right;padding-left:15px;">
+                    <img src="\static\img\table-2.jpg" alt="">
+                    <img src="\static\img\table-3.jpg" alt="">
+                    <img src="\static\img\table-4.jpg" alt="">
+                    <img src="\static\img\table-5.jpg" alt="">
+                    <img src="\static\img\table-6.jpg" alt="">
+                    <img src="\static\img\table-7.jpg" alt="">
+                </div>
+                <div style="clear:both;">
+
+                </div>
+                <div class="left4">
+                    <img src="\static\img\onefloor-bottom-1.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-2.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-3.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-4.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-5.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-6.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-7.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-8.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-9.jpg" alt="">
+                    <!-- <img src="\static\img\onefloor-bottom-10.jpg" alt=""> -->
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div><br />
+    <br />
+    <br />
+    <div class="fl">
+        <div class="floor1">
+            <div class="h2">
+                <span style="display:block;float:left;font-size:23px;margin-top:10px;margin-left:-180px;"><span style="color:red;">5F</span>服装鞋包</span>
+            </div>
+
+            <ul>
+                <li>大牌</li>
+                <li>男装</li>
+                <li>女装</li>
+                <li>鞋靴</li>
+                <li>箱包</li>
+                <li>内衣配饰</li>
+                <li>珠宝首饰</li>
+                <li>奢侈礼品</li>
+                <li>奢华腕表</li>
+            </ul>
+            <div style="clear:both;"></div>
+            <div class="tu">
+                <div class="left1" style="width:266px;float:left;">
+                    <img src="\static\img\img-flash-1.jpg" alt="">
+                    <img src="\static\img\flash-bottom.jpg" alt="" />
+                </div>
+                <div class="left2" style="width:355px;float:left;overflow:hidden;">
+                    <img src="\static\img\table-1.jpg">
+                    <img src="\static\img\LTloopshow-1.jpg" style="">
+                    <img src="\static\img\table-8.jpg" alt="">
+                </div>
+                <div class="left3" style="width:460px;float:right;padding-left:15px;">
+                    <img src="\static\img\table-2.jpg" alt="">
+                    <img src="\static\img\table-3.jpg" alt="">
+                    <img src="\static\img\table-4.jpg" alt="">
+                    <img src="\static\img\table-5.jpg" alt="">
+                    <img src="\static\img\table-6.jpg" alt="">
+                    <img src="\static\img\table-7.jpg" alt="">
+                </div>
+                <div style="clear:both;">
+
+                </div>
+                <div class="left4">
+                    <img src="\static\img\onefloor-bottom-1.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-2.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-3.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-4.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-5.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-6.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-7.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-8.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-9.jpg" alt="">
+                    <!-- <img src="\static\img\onefloor-bottom-10.jpg" alt=""> -->
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div><br />
+    <br />
+    <br />
+    <div class="fl">
+        <div class="floor1">
+            <div class="h2">
+                <span style="display:block;float:left;font-size:23px;margin-top:10px;margin-left:-180px;"><span style="color:red;">6F</span>服装鞋包</span>
+            </div>
+
+            <ul>
+                <li>大牌</li>
+                <li>男装</li>
+                <li>女装</li>
+                <li>鞋靴</li>
+                <li>箱包</li>
+                <li>内衣配饰</li>
+                <li>珠宝首饰</li>
+                <li>奢侈礼品</li>
+                <li>奢华腕表</li>
+            </ul>
+            <div style="clear:both;"></div>
+            <div class="tu">
+                <div class="left1" style="width:266px;float:left;">
+                    <img src="\static\img\img-flash-1.jpg" alt="">
+                    <img src="\static\img\flash-bottom.jpg" alt="" />
+                </div>
+                <div class="left2" style="width:355px;float:left;overflow:hidden;">
+                    <img src="\static\img\table-1.jpg">
+                    <img src="\static\img\LTloopshow-1.jpg" style="">
+                    <img src="\static\img\table-8.jpg" alt="">
+                </div>
+                <div class="left3" style="width:460px;float:right;padding-left:15px;">
+                    <img src="\static\img\table-2.jpg" alt="">
+                    <img src="\static\img\table-3.jpg" alt="">
+                    <img src="\static\img\table-4.jpg" alt="">
+                    <img src="\static\img\table-5.jpg" alt="">
+                    <img src="\static\img\table-6.jpg" alt="">
+                    <img src="\static\img\table-7.jpg" alt="">
+                </div>
+                <div style="clear:both;">
+
+                </div>
+                <div class="left4">
+                    <img src="\static\img\onefloor-bottom-1.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-2.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-3.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-4.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-5.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-6.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-7.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-8.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-9.jpg" alt="">
+                    <!-- <img src="\static\img\onefloor-bottom-10.jpg" alt=""> -->
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div><br />
+    <br />
+    <br />
+    <div class="fl">
+        <div class="floor1">
+            <div class="h2">
+                <span style="display:block;float:left;font-size:23px;margin-top:10px;margin-left:-180px;"><span style="color:red;">7F</span>服装鞋包</span>
+            </div>
+
+            <ul>
+                <li>大牌</li>
+                <li>男装</li>
+                <li>女装</li>
+                <li>鞋靴</li>
+                <li>箱包</li>
+                <li>内衣配饰</li>
+                <li>珠宝首饰</li>
+                <li>奢侈礼品</li>
+                <li>奢华腕表</li>
+            </ul>
+            <div style="clear:both;"></div>
+            <div class="tu">
+                <div class="left1" style="width:266px;float:left;">
+                    <img src="\static\img\img-flash-1.jpg" alt="">
+                    <img src="\static\img\flash-bottom.jpg" alt="" />
+                </div>
+                <div class="left2" style="width:355px;float:left;overflow:hidden;">
+                    <img src="\static\img\table-1.jpg">
+                    <img src="\static\img\LTloopshow-1.jpg" style="">
+                    <img src="\static\img\table-8.jpg" alt="">
+                </div>
+                <div class="left3" style="width:460px;float:right;padding-left:15px;">
+                    <img src="\static\img\table-2.jpg" alt="">
+                    <img src="\static\img\table-3.jpg" alt="">
+                    <img src="\static\img\table-4.jpg" alt="">
+                    <img src="\static\img\table-5.jpg" alt="">
+                    <img src="\static\img\table-6.jpg" alt="">
+                    <img src="\static\img\table-7.jpg" alt="">
+                </div>
+                <div style="clear:both;">
+
+                </div>
+                <div class="left4">
+                    <img src="\static\img\onefloor-bottom-1.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-2.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-3.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-4.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-5.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-6.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-7.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-8.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-9.jpg" alt="">
+                    <!-- <img src="\static\img\onefloor-bottom-10.jpg" alt=""> -->
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div><br />
+    <br />
+    <br />
+    <div class="fl">
+        <div class="floor1">
+            <div class="h2">
+                <span style="display:block;float:left;font-size:23px;margin-top:10px;margin-left:-180px;"><span style="color:red;">8F</span>服装鞋包</span>
+            </div>
+
+            <ul>
+                <li>大牌</li>
+                <li>男装</li>
+                <li>女装</li>
+                <li>鞋靴</li>
+                <li>箱包</li>
+                <li>内衣配饰</li>
+                <li>珠宝首饰</li>
+                <li>奢侈礼品</li>
+                <li>奢华腕表</li>
+            </ul>
+            <div style="clear:both;"></div>
+            <div class="tu">
+                <div class="left1" style="width:266px;float:left;">
+                    <img src="\static\img\img-flash-1.jpg" alt="">
+                    <img src="\static\img\flash-bottom.jpg" alt="" />
+                </div>
+                <div class="left2" style="width:355px;float:left;overflow:hidden;">
+                    <img src="\static\img\table-1.jpg">
+                    <img src="\static\img\LTloopshow-1.jpg" style="">
+                    <img src="\static\img\table-8.jpg" alt="">
+                </div>
+                <div class="left3" style="width:460px;float:right;padding-left:15px;">
+                    <img src="\static\img\table-2.jpg" alt="">
+                    <img src="\static\img\table-3.jpg" alt="">
+                    <img src="\static\img\table-4.jpg" alt="">
+                    <img src="\static\img\table-5.jpg" alt="">
+                    <img src="\static\img\table-6.jpg" alt="">
+                    <img src="\static\img\table-7.jpg" alt="">
+                </div>
+                <div style="clear:both;">
+
+                </div>
+                <div class="left4">
+                    <img src="\static\img\onefloor-bottom-1.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-2.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-3.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-4.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-5.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-6.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-7.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-8.jpg" alt="">
+                    <img src="\static\img\onefloor-bottom-9.jpg" alt="">
+                    <!-- <img src="\static\img\onefloor-bottom-10.jpg" alt=""> -->
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+
+        <div class="foot">
+
+        </div>
+    </div>
+    </div>
+    </div>
+<script>
+    function clearCookie() {
+            var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+            if (keys) {
+                for (var i = keys.length; i--;) {
+                    document.cookie = keys[i] + '=0;path=/;expires=' + new Date(0).toUTCString();//清除当前域名下的,例如：m.kevis.com
+                    document.cookie = keys[i] + '=0;path=/;domain=' + document.domain + ';expires=' + new Date(0).toUTCString();//清除当前域名下的，例如 .m.kevis.com
+                    document.cookie = keys[i] + '=0;path=/;domain=kevis.com;expires=' + new Date(0).toUTCString();//清除一级域名下的或指定的，例如 .kevis.com
+                }
+            }
+            $("#divcookie").html(document.cookie);
+            window.location.href="index";
+        }
+        //clearCookie();
+
+</script>
+</body>
+
+</html>

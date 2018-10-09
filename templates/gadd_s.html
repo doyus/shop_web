@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .imgdiv{
+            width: 60px;
+            height: 60px;
+        }
+        .imgdiv>img{
+            width: 100%;
+            height: 100%;
+        }
+        table{
+            margin: 300px 0 0 40%;
+            text-align: left;
+        }
+
+    </style>
+
+</head>
+<body>
+<form method="post" action="add_goods" enctype="multipart/form-data">
+    <table>
+
+        <tr>
+            <td>商品名称：</td>
+            <td><input type="text" name="s_name" ></td>
+        </tr>
+        <tr>
+            <td>商品描述：</td>
+            <td><input type="text" name="s_desc" ></td>
+        </tr>
+        <tr>
+            <td>商品价格：</td>
+            <td><input type="text" name="price"></td>
+        </tr>
+        <tr>
+            <td>商品图片：</td>
+            <td><input type="file" name="img"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="提交申请"></td>
+        </tr>
+
+
+
+
+
+
+    </table>
+
+</form>
+
+
+
+
+</body>
+</html>

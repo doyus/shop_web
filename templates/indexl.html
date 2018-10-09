@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			* {
+				padding: 0px;
+				margin: 0px;
+				list-style: none;
+			}
+			.TOP {
+				background-color: azure;
+				height: 30px;
+				width: 100%;
+				font-size: 14px;
+			}
+			
+			.TOP_right {
+				float: right;
+				padding: 0 10% 0 0;
+			}
+			
+			.TOP_right>ul>li {
+				float: left;
+				font: "微软雅黑";
+				color: darkgrey;
+				padding: 5px;
+			}
+			
+			.TOP_right>ul>li>a {
+				color: darkgrey;
+			}
+			
+			.TOP_right>ul>li>div>a {
+				color: darkgrey;
+			}
+			
+			.TOP_left {
+				float: left;
+				padding: 3px 0 0 20%;
+			}
+			
+			.TOP_left>ul>li {
+				float: left;
+				font: "微软雅黑";
+				color: darkgrey;
+				padding: 5px;
+			}
+			/*HEADER*/
+			
+			.HEADER {
+				clear: both;
+				background-color: antiquewhite;
+				height: auto;
+				width: 100%;
+				font-size: 14px;
+			}
+			
+			.HEADER_left_logo {
+				float: left;
+				padding: 20px 0 0 10%;
+			}
+			
+			.HEADER_inpput>form>div {
+				/*padding: 10px;*/
+				margin: 15px 0 0 35%;
+				width: 35%;
+				height: 70px;
+			}
+			
+			.HEADER_inpput>form>div>.one_div {
+				width: 80%;
+				float: left;
+			}
+			
+			.HEADER_inpput>form>div>.tow_div {
+				width: 20%;
+				float: left;
+			}
+			
+			.HEADER_inpput>form>div>.sth_div {
+				width: 100%;
+			}
+			
+			.HEADER_inpput>form>div>.sth_div>ul>li {
+				float: left;
+				padding: 5px;
+				font-size: 12px;
+			}
+			
+			.HEADER_inpput>form>div>.sth_div>ul>li>a {
+				color: firebrick;
+			}
+			
+			.HEADER_inpput>form>div>.sth_div>ul>li>a:hover {
+				color: #FF0000;
+			}
+			
+			.HEADER_inpput_bottom {
+				height: auto;
+				/**/
+				margin-bottom: 0;
+			}
+			
+			.HEADER_inpput_bottom>div {
+				padding: 0 0 0 370px;
+			}
+			
+			.HEADER_inpput_bottom>div>ul>li {
+				float: left;
+				padding: 0 0 0 30px;
+				font-size: 19px;
+				font-family: "微软雅黑";
+				text-decoration: none;
+				/*color: black;*/
+			}
+			
+			.HEADER_inpput_bottom>div>ul>li>a {
+				font-weight: 500;
+				color: darkslategray;
+			}
+			
+			.HEADER_inpput_bottom>div>ul>li>a:hover {
+				font-weight: 500;
+				color: orangered;
+			}
+			.HEADER_right_gouwuche{
+				/*clear: both;*/
+				float: right;
+				position: fixed;
+				left: 1200px;
+				top: 50px;
+				border:2px #D3D3D3 solid;
+				width: 200px;
+				height: 50px;
+				background: rgba(155,155,0,0.5);
+			}
+			.HEADER_right_gouwuche>a>div{
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				padding: 10px 0;
+			}
+			.HEADER_right_gouwuche>a:hover{
+				color: #FF4400;
+			}
+			.HEADER_right_gouwuche>a:hover>div{
+				background-color: rgba(155,155,20,0.5);
+			}
+			
+			.fenggexian {
+				width: 100%;
+				height: 3px;
+				background-color: #f40;
+			}
+			/*MAIN*/
+			
+			.MAIN {
+				clear: both;
+				width: 100%;
+				height: 480px;
+			}
+			
+			.MAIN_left_one {
+				float: left;
+				margin: 0 0 0 7%;
+				width: 17%;
+				height: 474px;
+				background-color: #FF4500;
+			}
+			
+			.MAIN_left_one>ul {
+				width: 100%;
+				float: left;
+			}
+			
+			.MAIN_left_one>ul>li {
+				padding: 11px 0 0 0;
+				text-decoration: none;
+				font-size: 14px;
+				color: #B22222;
+			}
+			
+			.MAIN_left_one>ul>li>.span {
+				float: right;
+				color: white;
+			}
+			
+			.MAIN_left_one>ul>li:hover {
+				background-color: aliceblue;
+			}
+			
+			.MAIN_left_one>ul>li>a {
+				color: black;
+				text-decoration: none;
+			}
+			
+			.MAIN_left_one>ul>li>a:hover {
+				color: #FF4400;
+				text-decoration: none;
+			}
+			
+			.MAIN_main {
+				padding: 5px 40px;
+				float: left;
+				width: auto;
+			}
+			
+			.MAIN_right {
+				margin: 0 3% 0 0;
+				float: right;
+				width: 20%;
+				height: 474px;
+			}
+			
+			.MAIN_right>.MAIN_right_top {
+				height: 140px;
+				font-family: "微软雅黑";
+			}
+			
+			.MAIN_right>.MAIN_right_top>div {
+				padding: 3px 0 0 0;
+			}
+			
+			.MAIN_right>.MAIN_right_top>div>span {
+				margin: 0 0 0 10px;
+				font-size: 1.2em;
+			}
+			
+			.MAIN_right>.MAIN_right_top>div>a {
+				margin: 0 10px 0 0;
+				float: right;
+				text-decoration: none;
+				font-size: 1.2em;
+			}
+			
+			.MAIN_right>.MAIN_right_top>div>a:hover {
+				margin: 0 10px 0 0;
+				color: #FF4400;
+				float: right;
+				text-decoration: none;
+			}
+			
+			.MAIN_right>.MAIN_right_top>ul>li {
+				padding: 3px 0 0 0;
+			}
+			
+			.MAIN_right>.MAIN_right_top>ul>li>a>span {
+				text-decoration: none;
+				font-family: "微软雅黑";
+				color: gray;
+				font-size: 14px;
+			}
+			
+			.MAIN_right>.MAIN_right_top>ul>li>a:hover {
+				text-decoration: none;
+			}
+			
+			.MAIN_right>.MAIN_right_top>ul>li>a>span:hover {
+				text-decoration: none;
+				color: #000000;
+			}
+			
+			.MAIN_right>.MAIN_right_center {
+				margin: 10px 0 0 0;
+				height: 200px;
+			}
+			
+			.MAIN_right_center>div {
+				height: 100%;
+				margin: 2px;
+				width: 100%;
+			}
+			
+			.MAIN_right_center>div>table {
+				padding: 0 0 0 3px;
+				text-align: center;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.MAIN_right>.MAIN_right_bottom {
+				height: 100px;
+				margin: 10px 0 0 0;
+			}
+			
+			.MAIN_right>.MAIN_right_bottom>img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.MENU {
+				margin: 0 0 0 7%;
+				width: 90%;
+				height: 200px;
+			}
+			
+			.MENU_left {
+				float: left;
+				width: 20%;
+			}
+			
+			.MENU_left>img {
+				padding: 6px;
+			}
+			
+			.MENU_right {
+				width: 100%;
+				height: 178px;
+			}
+			
+			.Cainixihuan {
+				float: left;
+				margin: 0 0 0 7%;
+				height: auto;
+				width: 90%;
+			}
+			
+			.Cainixihuan_header>span {
+				margin: 0 0 0 40px;
+				font-size: 22px;
+				font-family: "仿宋";
+			}
+			
+			.Cainixihuan_main {
+				margin: 5px 0 0 0;
+				width: 100%;
+				height: auto;
+			}
+			
+			.Cainixihuan_main>div>table {
+				width: 100%;
+				text-align: center;
+				align-content: center;
+			}
+			
+			.Cainixihuan_main>div {
+				width: 100%;
+				height: auto;
+			}
+			
+			.money {
+				color: #FF4400;
+			}
+			
+			.Pingzhilife {
+				float: left;
+				border: 2px solid greenyellow;
+				margin: 0 0 0 7%;
+				height: auto;
+				width: 90%;
+			}
+			
+			.Pingzhilife_header>span {
+				margin: 0 0 0 40px;
+				font-size: 22px;
+				font-family: "仿宋";
+			}
+			
+			.Pingzhilife_main {
+				width: auto;
+				height: auto;
+			}
+			
+			.Pingzhilife_main_right {
+				float: right;
+			}
+			
+			.Pingzhilife_main_right>table {
+				margin: 50px 13px 0 0;
+				text-align: center;
+				align-content: center;
+			}
+			
+			.Pingzhilife_main_left {
+				width: 83%;
+				height: auto;
+				float: left;
+				/*text-align:center;*/
+			}
+			/*.Pingzhilife_main_left>table>tbody>tr>td{
+			width: 200px;
+			height: 200px;
+		}*/
+			
+			.Pingzhilife_main_left_1>div {
+				clear: both;
+				float: left;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.Orange {
+				float: left;
+				border: 2px solid greenyellow;
+				margin: 0 0 0 7%;
+				height: auto;
+				width: 90%;
+				padding: 5px 0 0 30px;
+			}
+			
+			.Orange>img {
+				width: 32%;
+			}
+			
+			.ONE_F {
+				clear: both;
+				border: 2px solid greenyellow;
+				margin: 0 0 0 7%;
+				height: 750px;
+				width: 90%;
+			}
+			
+			.ONE_F_beader {
+				height: auto;
+				float: left;
+				margin: 0 0 0 40px;
+				width: 20%;
+				font-family: "微软雅黑";
+				font-size: 22px;
+			}
+			
+			.ONE_F_header_right {
+				float: right;
+				width: 70%;
+			}
+			
+			.ONE_F_header_right ul {
+				float: right;
+			}
+			
+			.ONE_F_header_right ul li {
+				margin: 10px 20px 0 30px;
+				float: left;
+			}
+			
+			.ONE_F_header_right ul li a {
+				color: black;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				text-decoration: none;
+			}
+			
+			.ONE_F_header_right ul li a:hover {
+				color: #FF4400;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				text-decoration: none;
+				border-top: #FF4400;
+			}
+			
+			.ONE_F_main {
+				width: 100%;
+				height: auto;
+			}
+			
+			.ONE_F_main_left {
+				/*float: left;*/
+				width: 60%;
+				height: auto;
+			}
+			
+			.ONE_F_main_left_left {
+				clear: both;
+				float: left;
+				width: 45%;
+				height: auto;
+			}
+			
+			.ONE_F_main_left_right {
+				/*clear: both;*/
+				float: left;
+				width: 40%;
+				height: auto;
+			}
+			
+			.ONE_F_main_right {
+				float: right;
+				width: 40%;
+				height: auto;
+			}
+			
+			.ONE_F_main_right_left {
+				width: 50%;
+				clear: both;
+				float: left;
+			}
+			
+			.ONE_F_main_right_right {
+				width: 50%;
+				float: left;
+			}
+			
+			.ONE_F_main_bottom {
+				clear: both;
+				width: 100%;
+			}
+			
+			.ONE_F_main_bottom>img {
+				padding: 15px;
+				float: left;
+			}
+			
+			.TITLE {
+				clear: both;
+				width: 100px;
+				position: fixed;
+				top: 100px;
+				left: 20px;
+				background-color: #FF4400;
+				height: 100px;
+			}
+			.BOTTOM_TOP{
+				margin-top: 0px;
+			}
+			.BOTTOM_TOP>ul>li{
+				float: left;
+				padding: 5px 0 0 20px;
+				text-decoration: none;
+			}
+		</style>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			#wrap {
+				position: relative;
+				width: 650px;
+				height: 350px;
+				margin: 30px auto;
+				border: 1px solid #9cc5ef;
+				overflow: hidden;
+			}
+			
+			#slider {
+				width: 500%;
+				height: 120%;
+				font: 50px/400px Microsoft Yahei;
+				text-align: center;
+				color: #fff;
+				margin-left: 0;
+				animation: slide1 5s ease-out infinite;
+			}
+			
+			#slider li {
+				float: left;
+				width: 600px;
+				height: 100%;
+			}
+			
+			#slider li:nth-child(1) {
+				background: #6bacef;
+			}
+			
+			#slider li:nth-child(2) {
+				background: #297cd3;
+			}
+			
+			#slider li:nth-child(3) {
+				background: #01254a;
+			}
+			
+			#slider li:nth-child(4) {
+				background: #01254a;
+			}
+			
+			#slider li:nth-child(5) {
+				background: #01254a;
+			}
+			
+			/*#slider li:nth-child(6) {
+				background: #01254a;
+			}*/
+			
+			@-webkit-keyframes slide1 {
+				0% {
+					margin-left: 0px;
+				}
+				10% {
+					margin-left: 0px;
+				}
+				20%{
+					margin-left: -600px;
+				}
+				30%{
+					margin-left: -600px;
+				}
+				40%{
+					margin-left: -1200px;
+				}
+				50%{
+					margin-left: -1200px;
+				}
+				
+				60%{
+					margin-left: -1800px;
+				}
+				70%{
+					margin-left: -1800px;
+				}
+				80%{
+					margin-left: -2400px;
+				}
+				90%{
+					margin-left: -2400px;
+				}
+				100%{
+					margin-left:0px ;
+				}
+			}
+			
+			@-webkit-keyframes slide2 {
+				0% {
+					margin-left: -2400px;
+				}
+				10% {
+					margin-left: -2400px;
+				}
+				20%{
+					margin-left: 0px;
+				}
+				30%{
+					margin-left: 0px;
+				}
+				40%{
+					margin-left: -600px;
+				}
+				50%{
+					margin-left: -600px;
+				}
+				
+				60%{
+					margin-left: -1200px;
+				}
+				70%{
+					margin-left: -1200px;
+				}
+				80%{
+					margin-left: -1800px;
+				}
+				90%{
+					margin-left: -1800px;
+				}
+				100%{
+					margin-left:-2400px ;
+				}
+			}
+			
+			@-webkit-keyframes slide3 {
+				0% {
+					margin-left: -1800px;
+				}
+				10% {
+					margin-left: -1800px;
+				}
+				20%{
+					margin-left: -2400px;
+				}
+				30%{
+					margin-left: -2400px;
+				}
+				40%{
+					margin-left: 0px;
+				}
+				50%{
+					margin-left: 0px;
+				}
+				
+				60%{
+					margin-left: -600px;
+				}
+				70%{
+					margin-left: -600px;
+				}
+				80%{
+					margin-left: -1200px;
+				}
+				90%{
+					margin-left: -1200px;
+				}
+				100%{
+					margin-left:-1800px ;
+				}
+			}
+			
+			@-webkit-keyframes slide4 {
+				0% {
+					margin-left: -1200px;
+				}
+				10% {
+					margin-left: -1200px;
+				}
+				20%{
+					margin-left: -1800px;
+				}
+				30%{
+					margin-left: -1800px;
+				}
+				40%{
+					margin-left: -2400px;
+				}
+				50%{
+					margin-left: -2400px;
+				}
+				
+				60%{
+					margin-left: 0px;
+				}
+				70%{
+					margin-left: 0px;
+				}
+				80%{
+					margin-left: -600px;
+				}
+				90%{
+					margin-left: -600px;
+				}
+				100%{
+					margin-left:-1200px ;
+				}
+			}
+			
+			@-webkit-keyframes slide5 {
+				0% {
+					margin-left: -600px;
+				}
+				10% {
+					margin-left: -600px;
+				}
+				20%{
+					margin-left: -1200px;
+				}
+				30%{
+					margin-left: -1200px;
+				}
+				40%{
+					margin-left: -1800px;
+				}
+				50%{
+					margin-left: -1800px;
+				}
+				
+				60%{
+					margin-left: -2400px;
+				}
+				70%{
+					margin-left: -2400px;
+				}
+				80%{
+					margin-left: 0px;
+				}
+				90%{
+					margin-left: 0px;
+				}
+				100%{
+					margin-left:-600px ;
+				}
+			}
+			
+			
+			
+			#l01:checked~#wrap #slider {
+				-webkit-animation-name: slide1;
+			}
+			
+			#l02:checked~#wrap #slider {
+				-webkit-animation-name: slide2;
+			}
+			
+			#l03:checked~#wrap #slider {
+				-webkit-animation-name: slide3;
+			}
+			
+			#l04:checked~#wrap #slider {
+				-webkit-animation-name: slide4;
+			}
+			
+			#l05:checked~#wrap #slider {
+				-webkit-animation-name: slide5;
+			}
+			
+			/*#l06:checked~#wrap #slider {
+				-webkit-animation-name: slide6;
+			}*/
+			
+			#l01:active~#wrap #slider {
+				-webkit-animation-name: none;
+				margin-left: 0;
+			}
+			
+			#l02:active~#wrap #slider {
+				-webkit-animation-name: none;
+				margin-left: -600px;
+			}
+			
+			#l03:active~#wrap #slider {
+				-webkit-animation-name: none;
+				margin-left: -1200px;
+			}
+			
+			#l04:active~#wrap #slider {
+				-webkit-animation-name: none;
+				margin-left: -1800px;
+			}
+			
+			#l05:active~#wrap #slider {
+				-webkit-animation-name: none;
+				margin-left: -2400px;
+			}
+			
+			/*#l06:active~#wrap #slider {
+				-webkit-animation-name: none;
+				margin-left: -3000px;
+			}*/
+			
+			#opts {
+				width: 600px;
+				height: 40px;
+				margin: auto;
+				color: #fff;
+				text-align: center;
+				font: 20px/40px Microsoft Yahei;
+			}
+			
+			#opts label {
+				float: left;
+				width: 100px;
+				height: 40px;
+				margin-left: 8px;
+				margin-right: 8px;
+				background:#FF4400;
+				cursor: pointer;
+			}
+			
+			#opts label:hover {
+				color: #CCCCCC;
+				background: #FF0000;
+			}
+			
+			#l01{
+				display: none;
+			}
+			#l02{
+				display: none;
+			}
+			#l03{
+				display: none;
+			}
+			#l04{
+				display: none;
+			}
+			#l05{
+				display: none;
+			}
+		</style>
+		<style type="text/css">
+		
+        .TITLE{
+        	text-align: center;
+        	font-size: 16px;
+        	background-color: #B22222;
+            height: 540px;
+            width: 60px;
+            position: fixed;
+            display: none;
+            left: 20px;
+            top: 100px;
+        }
+        .TITLE ul li{
+            width: 60px;
+            height: 60px;
+            border: dashed 1px lightgray;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            position: relative;
+        }
+        .TITLE ul li span{
+        	font-size: 18px;
+            display: none;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            z-index: 1;
+            background-color:ghos;
+            color:forestgreen;
+            overflow: hidden;
+            top: 0px;
+            left: 0px;
+            font-size: 12px;
+        }
+        
+        
+		.DIV_div{
+			clear: both;
+			text-align: center;
+			color: #FF4400;
+			font-size: 24px;
+		}
+		.DIV_div>ul{
+			clear: both;
+			position: absolute;
+			left: -150px;
+			top: 20px;
+			text-align: center;
+		}
+		
+        .MAIN_left_one>ul>li>div{
+        	display: none;
+        }
+        .MAIN_left_one ul li:hover div{
+        	width: 700px;
+        	height: 450px;
+        	position:absolute;
+        	top: 160px;
+        	left:350px ;
+        	background:white;
+			display: inline-block;
+			opacity:0.9 ;  
+			z-index: 5;      	
+        }
+        .Body {
+				width: 1500px;
+				margin: 0 auto;
+				position: relative;
+				border-left: 2px solid #666;
+				border-right: 2px solid #666;
+			}
+        
+        
+		</style>
+        <style type="text/css">
+
+
+			.btnnn{
+				font-size: 16px;
+				text-decoration: none;
+				color: #fff;
+			}
+			/* 弹框默认隐藏 */
+
+			.login {
+				width: 600px;
+				box-shadow: 0 0 10px #efefef;
+				display: none;
+				position: absolute;
+				background: #fff;
+				z-index: 10;
+			}
+
+			#head {
+				height: 50px;
+				width: 100%;
+				background: orange;
+			}
+
+			#head h3 {
+				color: #fff;
+				line-height: 40px;
+				margin-left: 15px;
+				font-size: 20px;
+				font-weight: normal;
+				letter-spacing: 2px;
+				display: inline-block;
+			}
+
+			#head span {
+				float: right;
+
+				width: 17px;
+				height: 18px;
+				margin-top: 16px;
+				margin-right: 10px;
+				cursor: pointer;
+			}
+
+			#head span:hover {
+				background:#FF4400;
+			}
+
+			.login-body {
+				width: 570px;
+				margin: 20px auto;
+			}
+
+			.login-body p {
+				width: 100%;
+				text-align: center;
+			}
+
+			.login-body p:nth-of-type(1) {
+				background:black
+				background-size: 30px 30px;
+				text-indent: 40px;
+				line-height: 30px;
+				font-size: 14px;
+				color: #666;
+				text-align: left;
+			}
+
+			.user input,
+			.pwd input {
+				width: 240px;
+				height: 30px;
+			}
+
+			.user,
+			.pwd {
+				margin: 15px 0;
+			}
+
+			.login-body p:nth-of-type(4) a {
+				display: inline-block;
+				font-size: 14px;
+				margin-left: 60px;
+			}
+
+			.send {
+				width: 263px;
+				height: 40px;
+				background:blue;
+				margin: 30px auto;
+			}
+			/* 透明黑色背景,默认隐藏 */
+
+			.layer {
+				background: #333;
+				opacity: 0.4;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				top: 0;
+				display: none;
+			}
+		</style>
+    </head>
+	<body>
+
+    <form method="post" action="denglu">
+		<div class="login">
+			<div id="head">
+				<h3>用户登陆</h3>
+				<span>X</span>
+			</div>
+			<div class="login-body">
+				<p>我的京东：</p>
+				<p class="user">
+					账号：<input type="text" />
+				</p>
+				<p class="pwd">
+					密码：<input type="password" />
+				</p>
+				<p>
+					<input type="checkbox" />下次自动登录
+					<a href="#">忘记密码</a>
+				</p>
+				<div class="send">
+					<input type="submit" value="登录" />
+				</div>
+			</div>
+		</div>
+		</form>
+		<!-- 透明黑色背景 -->
+		<div class="layer"></div>
+
+
+
+		<div id="#" class="Body">
+			<!--导航条-->
+			<div class="TOP">
+				<div class="TOP_left">
+					<ul>
+						<li>送至：</li>
+						<li>
+							<a href="#">北京</a>
+						</li>
+					</ul>
+				</div>
+				<div class="TOP_right">
+					<ul>
+						<li>
+							<a class="btnnn" href="#">您好，请登录！</a>
+							<a href="zhuce" style="color:#f40">免费注册</a>
+                            <a href="gdenglu" style="color:#f40">管理员入口</a>
+						</li>
+						<li>
+							<div>
+								<a href="#">我的订单</a>
+							</div>
+						</li>
+						<li class="shuxian">|</li>
+						<li>
+							<div>
+								<a href="#">我的京东</a>
+							</div>
+						</li>
+						<li class="shuxian">|</li>
+						<li>
+							<div>
+								<a href="#">京东会员</a>
+							</div>
+						</li>
+						<li class="shuxian">|</li>
+						<li>
+							<div>
+								<a href="#">企业采购</a>
+							</div>
+						</li>
+						<li class="shuxian">|</li>
+						<li>
+							<div>
+								<a href="#">手机京东</a>
+							</div>
+						</li>
+						<li class="shuxian">|</li>
+						<li>
+							<div>
+								<a href="#">关注京东</a>
+							</div>
+						</li>
+						<li class="shuxian">|</li>
+						<li>
+							<div>
+								<a href="#">客户服务</a>
+							</div>
+						</li>
+						<li class="shuxian">|</li>
+						<li>
+							<div>
+								<a href="#">网站导航</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--header-->
+			<div class="HEADER">
+				<div class="HEADER_left_logo">
+					<img src="../statics/img/logo.png" />
+				</div>
+
+				<div class="HEADER_inpput">
+					<form action="#" method="post">
+						<div>
+							<div class="one_div">
+								<input type="text" class="form-control" placeholder="您想要找什么？" />
+							</div>
+							<div class="tow_div">
+								<input class="btn btn-danger" type="button" value="搜索">
+							</div>
+							<div class="sth_div">
+								<ul>
+									<li>
+										<a href="#">香水</a>
+									</li>
+									<li>
+										<a href="#">护肤品</a>
+									</li>
+									<li>
+										<a href="#">电器</a>
+									</li>
+									<li>
+										<a href="#">黑科技</a>
+									</li>
+									<li>
+										<a href="#">笔记本</a>
+									</li>
+									<li>
+										<a href="#">鼠标</a>
+									</li>
+									<li>
+										<a href="#">耳机</a>
+									</li>
+									<li>
+										<a href="#">摄像机</a>
+									</li>
+									<li>
+										<a href="#">鼠标</a>
+									</li>
+									<li>
+										<a href="#">耳机</a>
+									</li>
+									<li>
+										<a href="#">摄像机</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</form>
+
+				<div id="#" class="HEADER_right_gouwuche">
+					<a href="#">
+					<div>
+						我的购物车
+					</div>
+					</a>
+				</div>
+
+
+
+				</div>
+
+
+			</div>
+			<div class="HEADER_inpput_bottom">
+				<div>
+					<ul>
+						<li>
+							<a href="#">服装城</a>
+						</li>
+						<li>
+							<a href="#">美妆馆</a>
+						</li>
+						<li>
+							<a href="#">京东超市</a>
+						</li>
+						<li>
+							<a href="#">生鲜</a>
+						</li>
+						<li>
+							<a href="#">全球购</a>
+						</li>
+						<li>
+							<a href="#">闪购</a>
+						</li>
+						<li>
+							<a href="#">团购</a>
+						</li>
+						<li>
+							<a href="#">拍卖</a>
+						</li>
+						<li>
+							<a href="#">金融</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--MAIN-->
+			<div class="MAIN">
+				<div class="fenggexian">
+				</div>
+
+				<div id="#" class="MAIN_left">
+					<div class="MAIN_left_one">
+						<ul>
+							<li>
+								<a href="#">家用电器</a><span class="span">></span></li>
+							<li>
+								<a href="#">手机</a>
+								<span>/</span>
+								<a href="#">数码</a>
+								<span>/</span>
+								<a href="#">京东通信</a><span class="span">></span>
+								<div>
+									<div class="DIV_div">
+										<ul >
+											<li>购物车</li>
+											<li>收藏</li>
+											<li>添加商品</li>
+											<li>我的衣柜</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="#">电脑</a>
+								<span>/</span>
+								<a href="#">办公</a><span class="span">></span>
+							</li>
+							<li>
+								<a href="#">家具</a>
+								<span>/</span>
+								<a href="#">玩具</a>
+								<span>/</span>
+								<a href="#">家装</a>
+								<span>/</span>
+								<a href="#">厨具</a><span class="span">></span>
+							</li>
+							<li>
+								<a href="#">男装</a>
+								<span>/</span>
+								<a href="#">女装</a>
+								<span>/</span>
+								<a href="#">童装</a>
+								<span>/</span>
+								<a href="#">内衣</a><span class="span">></span>
+							</li>
+							<li>
+								<a href="#">个护化妆</a>
+								<span>/</span>
+								<a href="#">清洁用品</a>
+								<span>/</span>
+								<a href="#">宠物</a><span class="span">></span>
+							</li>
+							<li>
+								<a href="#">鞋靴</a>
+								<span>/</span>
+								<a href="#">箱包</a>
+								<span>/</span>
+								<a href="#">珠宝</a>
+								<span>/</span>
+								<a href="#">奢饰品</a><span class="span">></span>
+							</li>
+
+							<li>
+								<a href="#">运动户外</a>
+								<span>/</span>
+								<a href="#">钟表</a><span class="span">></span>
+							</li>
+							<li>
+								<a href="#">汽车</a>
+								<span>/</span>
+								<a href="#">汽车用品</a><span class="span">></span>
+							</li>
+							<li>
+								<a href="#">母婴</a>
+								<span>/</span>
+								<a href="#">玩具乐器</a><span class="span">></span>
+							</li>
+
+							<li>
+								<a href="#">食品</a>
+								<span>/</span>
+								<a href="#">酒类</a>
+								<span>/</span>
+								<a href="#">生鲜</a>
+								<span>/</span>
+								<a href="#">特产</a><span class="span">></span>
+							</li>
+
+							<li>
+								<a href="#">医药保健</a>
+							</li>
+							<li>
+								<a href="#">图书</a>
+								<span>/</span>
+								<a href="#">音像</a>
+								<span>/</span>
+								<a href="#">电子书</a><span class="span">></span>
+							</li>
+							<li>
+								<a href="#">彩票</a>
+								<span>/</span>
+								<a href="#">旅行</a>
+								<span>/</span>
+								<a href="#">充值</a>
+								<span>/</span>
+								<a href="#">票务</a><span class="span">></span>
+							</li>
+							<li>
+								<a href="#">理财</a>
+								<span>/</span>
+								<a href="#">众筹</a>
+								<span>/</span>
+								<a href="#">白条</a>
+								<span>/</span>
+								<a href="#">保险</a><span class="span">></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="MAIN_main">
+					<div id="#">
+						<input type="radio" checked name="slider" id="l01">
+						<input type="radio" name="slider" id="l02">
+						<input type="radio" name="slider" id="l03">
+						<input type="radio" name="slider" id="l04">
+						<input type="radio" name="slider" id="l05">
+						<!--<input type="radio" name="slider" id="l06">-->
+
+						<div id="wrap">
+							<ul id="slider">
+								<li><img src="../statics/img/asd-5.jpg" /></li>
+								<!--<li><img src="../statics/img/asd-1.jpg" /></li>
+				<li><img src="../statics/img/asd-1.jpg" /></li>
+				<li><img src="../statics/img/asd-1.jpg" /></li>
+				<li><img src="../statics/img/asd-1.jpg" /></li>-->
+								<li><img src="../statics/img/asd-4.jpg" /></li>
+								<li><img src="../statics/img/asd-5.jpg" /></li>
+								<li><img src="../statics/img/asd-4.jpg" /></li>
+								<li><img src="../statics/img/asd-5.jpg" /></li>
+
+							</ul>
+						</div>
+						<div id="opts">
+							<label for="l01">1</label>
+							<label for="l02">2</label>
+							<label for="l03">3</label>
+							<label for="l04">4</label>
+							<label for="l05">5</label>
+							<!--<label for="l06">6</label>-->
+						</div>
+
+					</div>
+				</div>
+
+				<div class="MAIN_right">
+					<div class="MAIN_right_top">
+						<div>
+							<span>
+							京东快报
+						</span>
+							<a href="#">
+								更多》
+							</a>
+						</div>
+						<ul>
+							<li>
+								<a href="#"><b>【特惠】</b><span>三亚狂欢季，第二人半价！</span></a>
+							</li>
+							<li>
+								<a href="#"><b>【公告】</b><span>京东最新捐赠物资抵达抗洪前线</span></a>
+							</li>
+							<li>
+								<a href="#"><b>【特惠】</b><span>自营文具满199减100</span></a>
+							</li>
+							<li>
+								<a href="#"><b>【公告】</b><span>抢险救灾不停歇，京东在行动</span></a>
+							</li>
+							<li>
+								<a href="#"><b>【特惠】</b><span>每日享折扣京董品质游</span></a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="MAIN_right_center">
+						<div>
+							<table>
+								<tr>
+									<td><img src="../statics/img/menu-img1.png"></td>
+									<td><img src="../statics/img/menu-img2.png"></td>
+									<td><img src="../statics/img/menu-img3.png"></td>
+									<td><img src="../statics/img/menu-img4.png"></td>
+								</tr>
+								<tr>
+									<td>手机</td>
+									<td>飞机</td>
+									<td>电影</td>
+									<td>游戏</td>
+								</tr>
+								<tr>
+									<td><img src="../statics/img/menu-img5.png"></td>
+									<td><img src="../statics/img/menu-img6.png"></td>
+									<td><img src="../statics/img/menu-img7.png"></td>
+									<td><img src="../statics/img/menu-img8.png"></td>
+								</tr>
+								<tr>
+									<td>彩票</td>
+									<td>加油站</td>
+									<td>酒店</td>
+									<td>火车票</td>
+								</tr>
+								<tr>
+									<td><img src="../statics/img/menu-img9.png"></td>
+									<td><img src="../statics/img/menu-img10.png"></td>
+									<td><img src="../statics/img/menu-img11.png"></td>
+									<td><img src="../statics/img/menu-img12.png"></td>
+								</tr>
+								<tr>
+									<td>众筹</td>
+									<td>理财</td>
+									<td>礼品卡</td>
+									<td>白条</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+					<div class="MAIN_right_bottom">
+						<img src="../statics/img/img-menu-bottom.jpg" />
+					</div>
+
+				</div>
+
+			</div>
+			<div class="MENU">
+				<div class="MENU_left">
+					<img src="../statics/img/tuijian-1.png" />
+				</div>
+				<div class="MENU_right">
+					<img src="../statics/img/tuijian-10.jpg" />
+					<img src="../statics/img/tuijian-13.jpg" />
+					<img src="../statics/img/tuijian-4.jpg" />
+					<img src="../statics/img/tuijian-5.jpg" />
+				</div>
+
+			</div>
+			<div id="#" class="Cainixihuan">
+
+				<div class="Cainixihuan_header">
+					<span>猜你喜欢</span>
+					<img src="../statics/img/Clike-img-1.png" />
+				</div>
+
+				<div class="Cainixihuan_main">
+					<div>
+						<table>
+							<tr>
+								<td><img src="../statics/img/light-1.jpg"></td>
+								<td><img src="../statics/img/light-2.jpg" /></td>
+								<td><img src="../statics/img/light-3.jpg" /></td>
+								<td><img src="../statics/img/light-4.jpg" /></td>
+								<td><img src="../statics/img/light-5.jpg" /></td>
+								<td><img src="../statics/img/light-6.jpg" /></td>
+							</tr>
+							<tr>
+								<td>雷士照明 led卧室灯 吸</td>
+								<td>金幻LED吸顶灯客厅灯</td>
+								<td>九阳(joyoung)电磁</td>
+								<td>奥克斯(AUX)</td>
+								<td>Apple poad mini 2 平板</td>
+								<td>Apple ipad Air 2 平板电</td>
+							</tr>
+							<tr>
+								<td>顶灯 灯具灯饰 现代简约</td>
+								<td>具长方形灯饰现代简约</td>
+								<td>炉整版触摸式</td>
+								<td>c2224LD 整版触摸式超薄</td>
+								<td>电脑 7.9英寸(16G)</td>
+								<td>脑 9.7英寸 (16G)</td>
+							</tr>
+							<tr>
+								<td><span class="money">￥129.00</span></td>
+								<td><span class="money">￥295.00</span></td>
+								<td><span class="money">￥199.00</span></td>
+								<td><span class="money">￥159.00</span></td>
+								<td><span class="money">￥1988.00</span></td>
+								<td><span class="money">￥2888.00</span></td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="Pingzhilife">
+				<div class="Pingzhilife_header">
+					<span>京东·品质生活</span>
+				</div>
+
+				<div class="Pingzhilife_main">
+					<div class="Pingzhilife_main_left">
+
+						<div class="Pingzhilife_main_left_1">
+							<div>
+								<img src="../statics/img/life-img1.jpg">
+								<img src="../statics/img/life-img2.jpg">
+								<img src="../statics/img/jie-1.png" />
+								<img src="../statics/img/life-img3.jpg" />
+								<img src="../statics/img/jie-2.jpg" />
+								<img src="../statics/img/jie-1.png" />
+								<img src="../statics/img/jie-3.jpg" />
+
+							</div>
+
+							<!--<div>
+						<img src="../statics/img/life-img2.jpg" >
+						<p style="z-index: 1">
+							<p>尚新品</p>
+							<p>锂电跨骑车</p>
+							<span style="color: #FF4400;">新品下单送￥1694豪礼</span>
+						</p>
+						</div>-->
+						</div>
+
+					</div>
+
+					<div class="Pingzhilife_main_right">
+						<table>
+							<tr>
+								<td><img src="../statics/img/onefloor-bottom-1.jpg"></td>
+								<td><img src="../statics/img/onefloor-bottom-9.jpg"></td>
+							</tr>
+							<tr>
+								<td><img src="../statics/img/onefloor-bottom-3.jpg"></td>
+								<td><img src="../statics/img/onefloor-bottom-4.jpg"></td>
+							</tr>
+							<tr>
+								<td><img src="../statics/img/onefloor-bottom-5.jpg"></td>
+								<td><img src="../statics/img/onefloor-bottom-6.jpg"></td>
+							</tr>
+							<tr>
+								<td><img src="../statics/img/onefloor-bottom-7.jpg"></td>
+								<td><img src="../statics/img/onefloor-bottom-8.jpg"></td>
+							</tr>
+							<tr>
+								<td><img src="../statics/img/onefloor-bottom-9.jpg"></td>
+								<td><img src="../statics/img/onefloor-bottom-10.jpg"></td>
+							</tr>
+							<tr>
+								<td><img src="../statics/img/onefloor-bottom-7.jpg"></td>
+								<td><img src="../statics/img/onefloor-bottom-8.jpg"></td>
+							</tr>
+							<tr>
+								<td><img src="../statics/img/onefloor-bottom-3.jpg"></td>
+								<td><img src="../statics/img/onefloor-bottom-4.jpg"></td>
+							</tr>
+
+						</table>
+					</div>
+
+				</div>
+			</div>
+			<div class="Orange">
+				<img src="../statics/img/long-img1.jpg" /><img src="../statics/img/long-img2.jpg" /><img src="../statics/img/long-img3.jpg" />
+			</div>
+			<!--一楼-->
+			<div class="ONE_F">
+				<a name="YILOU"></a>
+				<div class="ONE_F_beader">
+					<p><span style="color: #FF4400;">1F</span>服装鞋包</p>
+				</div>
+
+				<div class="ONE_F_header_right">
+					<ul>
+						<li>
+							<a href="#">大牌</a>
+						</li>
+						<li>
+							<a href="#">男装</a>
+						</li>
+						<li>
+							<a href="#">女装</a>
+						</li>
+						<li>
+							<a href="#">鞋靴</a>
+						</li>
+						<li>
+							<a href="#">箱包</a>
+						</li>
+						<li>
+							<a href="#">内衣配饰</a>
+						</li>
+						<li>
+							<a href="#">珠宝首饰</a>
+						</li>
+						<li>
+							<a href="#">奢饰礼品</a>
+						</li>
+						<li>
+							<a href="#">奢华腕表</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ONE_F_main">
+					<div class="ONE_F_main_left">
+						<div class="ONE_F_main_left_left">
+							<img src="../statics/img/img-flash-1.jpg" />
+							<img src="../statics/img/flash-bottom.jpg" />
+						</div>
+						<div class="ONE_F_main_left_right">
+							<img src="../statics/img/table-1.jpg" />
+							<img src="../statics/img/LTloopshow-1.jpg" />
+							<img src="../statics/img/table-8.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_right">
+						<div class="ONE_F_main_right_left">
+							<img src="../statics/img/table-2.jpg" />
+							<img src="../statics/img/table-4.jpg" />
+							<img src="../statics/img/table-6.jpg" />
+							<img src="../statics/img/table-9.jpg" />
+						</div>
+						<div class="ONE_F_main_right_right">
+							<img src="../statics/img/table-3.jpg" />
+							<img src="../statics/img/table-5.jpg" />
+							<img src="../statics/img/table-7.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_bottom">
+						<img src="../statics/img/onefloor-bottom-1.jpg" />
+						<img src="../statics/img/onefloor-bottom-2.jpg" />
+						<img src="../statics/img/onefloor-bottom-3.jpg" />
+						<img src="../statics/img/onefloor-bottom-4.jpg" />
+						<img src="../statics/img/onefloor-bottom-5.jpg" />
+						<img src="../statics/img/onefloor-bottom-6.jpg" />
+						<img src="../statics/img/onefloor-bottom-7.jpg" />
+						<img src="../statics/img/onefloor-bottom-8.jpg" />
+						<img src="../statics/img/onefloor-bottom-9.jpg" />
+						<img src="../statics/img/onefloor-bottom-10.jpg" />
+					</div>
+				</div>
+			</div>
+			<!--二楼-->
+			<div class="ONE_F" >
+				<a name="ERLOU"></a>
+				<div class="ONE_F_beader">
+					<p><span style="color: #FF4400;">2F</span>个肤美妆</p>
+				</div>
+
+				<div class="ONE_F_header_right">
+					<ul>
+						<li>
+							<a href="#">大牌</a>
+						</li>
+						<li>
+							<a href="#">男装</a>
+						</li>
+						<li>
+							<a href="#">女装</a>
+						</li>
+						<li>
+							<a href="#">鞋靴</a>
+						</li>
+						<li>
+							<a href="#">箱包</a>
+						</li>
+						<li>
+							<a href="#">内衣配饰</a>
+						</li>
+						<li>
+							<a href="#">珠宝首饰</a>
+						</li>
+						<li>
+							<a href="#">奢饰礼品</a>
+						</li>
+						<li>
+							<a href="#">奢华腕表</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ONE_F_main">
+					<div class="ONE_F_main_left">
+						<div class="ONE_F_main_left_left">
+							<img src="../statics/img/img-flash-2.jpg" />
+							<img src="../statics/img/flash-bottom.jpg" />
+						</div>
+						<div class="ONE_F_main_left_right">
+							<img src="../statics/img/table-1.jpg" />
+							<img src="../statics/img/LTloopshow-1.jpg" />
+							<img src="../statics/img/table-8.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_right">
+						<div class="ONE_F_main_right_left">
+							<img src="../statics/img/table-2.jpg" />
+							<img src="../statics/img/table-4.jpg" />
+							<img src="../statics/img/table-6.jpg" />
+							<img src="../statics/img/table-9.jpg" />
+						</div>
+						<div class="ONE_F_main_right_right">
+							<img src="../statics/img/table-3.jpg" />
+							<img src="../statics/img/table-5.jpg" />
+							<img src="../statics/img/table-7.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_bottom">
+						<img src="../statics/img/onefloor-bottom-1.jpg" />
+						<img src="../statics/img/onefloor-bottom-2.jpg" />
+						<img src="../statics/img/onefloor-bottom-3.jpg" />
+						<img src="../statics/img/onefloor-bottom-4.jpg" />
+						<img src="../statics/img/onefloor-bottom-5.jpg" />
+						<img src="../statics/img/onefloor-bottom-6.jpg" />
+						<img src="../statics/img/onefloor-bottom-7.jpg" />
+						<img src="../statics/img/onefloor-bottom-8.jpg" />
+						<img src="../statics/img/onefloor-bottom-9.jpg" />
+						<img src="../statics/img/onefloor-bottom-10.jpg" />
+					</div>
+				</div>
+			</div>
+			<!--三楼-->
+			<div class="ONE_F" >
+				<a name="SANLOU"></a>
+				<div class="ONE_F_beader">
+					<p><span style="color: #FF4400;">3F</span>手机通讯</p>
+				</div>
+
+				<div class="ONE_F_header_right">
+					<ul>
+						<li>
+							<a href="#">大牌</a>
+						</li>
+						<li>
+							<a href="#">男装</a>
+						</li>
+						<li>
+							<a href="#">女装</a>
+						</li>
+						<li>
+							<a href="#">鞋靴</a>
+						</li>
+						<li>
+							<a href="#">箱包</a>
+						</li>
+						<li>
+							<a href="#">内衣配饰</a>
+						</li>
+						<li>
+							<a href="#">珠宝首饰</a>
+						</li>
+						<li>
+							<a href="#">奢饰礼品</a>
+						</li>
+						<li>
+							<a href="#">奢华腕表</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ONE_F_main">
+					<div class="ONE_F_main_left">
+						<div class="ONE_F_main_left_left">
+							<img src="../statics/img/img-flash-3.jpg" />
+							<img src="../statics/img/flash-bottom.jpg" />
+						</div>
+						<div class="ONE_F_main_left_right">
+							<img src="../statics/img/table-1.jpg" />
+							<img src="../statics/img/LTloopshow-1.jpg" />
+							<img src="../statics/img/table-8.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_right">
+						<div class="ONE_F_main_right_left">
+							<img src="../statics/img/table-2.jpg" />
+							<img src="../statics/img/table-4.jpg" />
+							<img src="../statics/img/table-6.jpg" />
+							<img src="../statics/img/table-9.jpg" />
+						</div>
+						<div class="ONE_F_main_right_right">
+							<img src="../statics/img/table-3.jpg" />
+							<img src="../statics/img/table-5.jpg" />
+							<img src="../statics/img/table-7.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_bottom">
+						<img src="../statics/img/onefloor-bottom-1.jpg" />
+						<img src="../statics/img/onefloor-bottom-2.jpg" />
+						<img src="../statics/img/onefloor-bottom-3.jpg" />
+						<img src="../statics/img/onefloor-bottom-4.jpg" />
+						<img src="../statics/img/onefloor-bottom-5.jpg" />
+						<img src="../statics/img/onefloor-bottom-6.jpg" />
+						<img src="../statics/img/onefloor-bottom-7.jpg" />
+						<img src="../statics/img/onefloor-bottom-8.jpg" />
+						<img src="../statics/img/onefloor-bottom-9.jpg" />
+						<img src="../statics/img/onefloor-bottom-10.jpg" />
+					</div>
+				</div>
+			</div>
+			<!--四楼-->
+			<div class="ONE_F" >
+				<a name="SILOU"></a>
+				<div class="ONE_F_beader">
+					<p><span style="color: #FF4400;">4F</span>户外运动</p>
+				</div>
+
+				<div class="ONE_F_header_right">
+					<ul>
+						<li>
+							<a href="#">大牌</a>
+						</li>
+						<li>
+							<a href="#">男装</a>
+						</li>
+						<li>
+							<a href="#">女装</a>
+						</li>
+						<li>
+							<a href="#">鞋靴</a>
+						</li>
+						<li>
+							<a href="#">箱包</a>
+						</li>
+						<li>
+							<a href="#">内衣配饰</a>
+						</li>
+						<li>
+							<a href="#">珠宝首饰</a>
+						</li>
+						<li>
+							<a href="#">奢饰礼品</a>
+						</li>
+						<li>
+							<a href="#">奢华腕表</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ONE_F_main">
+					<div class="ONE_F_main_left">
+						<div class="ONE_F_main_left_left">
+							<img src="../statics/img/img-flash-4.jpg" />
+							<img src="../statics/img/flash-bottom.jpg" />
+						</div>
+						<div class="ONE_F_main_left_right">
+							<img src="../statics/img/table-1.jpg" />
+							<img src="../statics/img/LTloopshow-1.jpg" />
+							<img src="../statics/img/table-8.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_right">
+						<div class="ONE_F_main_right_left">
+							<img src="../statics/img/table-2.jpg" />
+							<img src="../statics/img/table-4.jpg" />
+							<img src="../statics/img/table-6.jpg" />
+							<img src="../statics/img/table-9.jpg" />
+						</div>
+						<div class="ONE_F_main_right_right">
+							<img src="../statics/img/table-3.jpg" />
+							<img src="../statics/img/table-5.jpg" />
+							<img src="../statics/img/table-7.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_bottom">
+						<img src="../statics/img/onefloor-bottom-1.jpg" />
+						<img src="../statics/img/onefloor-bottom-2.jpg" />
+						<img src="../statics/img/onefloor-bottom-3.jpg" />
+						<img src="../statics/img/onefloor-bottom-4.jpg" />
+						<img src="../statics/img/onefloor-bottom-5.jpg" />
+						<img src="../statics/img/onefloor-bottom-6.jpg" />
+						<img src="../statics/img/onefloor-bottom-7.jpg" />
+						<img src="../statics/img/onefloor-bottom-8.jpg" />
+						<img src="../statics/img/onefloor-bottom-9.jpg" />
+						<img src="../statics/img/onefloor-bottom-10.jpg" />
+					</div>
+				</div>
+			</div>
+			<!--五楼-->
+			<div class="ONE_F" >
+				<a name="WULOU"></a>
+				<div class="ONE_F_beader">
+					<p><span style="color: #FF4400;">5F</span>电脑数码</p>
+				</div>
+
+				<div class="ONE_F_header_right">
+					<ul>
+						<li>
+							<a href="#">大牌</a>
+						</li>
+						<li>
+							<a href="#">男装</a>
+						</li>
+						<li>
+							<a href="#">女装</a>
+						</li>
+						<li>
+							<a href="#">鞋靴</a>
+						</li>
+						<li>
+							<a href="#">箱包</a>
+						</li>
+						<li>
+							<a href="#">内衣配饰</a>
+						</li>
+						<li>
+							<a href="#">珠宝首饰</a>
+						</li>
+						<li>
+							<a href="#">奢饰礼品</a>
+						</li>
+						<li>
+							<a href="#">奢华腕表</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ONE_F_main">
+					<div class="ONE_F_main_left">
+						<div class="ONE_F_main_left_left">
+							<img src="../statics/img/img-flash-5.jpg" />
+							<img src="../statics/img/flash-bottom.jpg" />
+						</div>
+						<div class="ONE_F_main_left_right">
+							<img src="../statics/img/table-1.jpg" />
+							<img src="../statics/img/LTloopshow-1.jpg" />
+							<img src="../statics/img/table-8.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_right">
+						<div class="ONE_F_main_right_left">
+							<img src="../statics/img/table-2.jpg" />
+							<img src="../statics/img/table-4.jpg" />
+							<img src="../statics/img/table-6.jpg" />
+							<img src="../statics/img/table-9.jpg" />
+						</div>
+						<div class="ONE_F_main_right_right">
+							<img src="../statics/img/table-3.jpg" />
+							<img src="../statics/img/table-5.jpg" />
+							<img src="../statics/img/table-7.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_bottom">
+						<img src="../statics/img/onefloor-bottom-1.jpg" />
+						<img src="../statics/img/onefloor-bottom-2.jpg" />
+						<img src="../statics/img/onefloor-bottom-3.jpg" />
+						<img src="../statics/img/onefloor-bottom-4.jpg" />
+						<img src="../statics/img/onefloor-bottom-5.jpg" />
+						<img src="../statics/img/onefloor-bottom-6.jpg" />
+						<img src="../statics/img/onefloor-bottom-7.jpg" />
+						<img src="../statics/img/onefloor-bottom-8.jpg" />
+						<img src="../statics/img/onefloor-bottom-9.jpg" />
+						<img src="../statics/img/onefloor-bottom-10.jpg" />
+					</div>
+				</div>
+			</div>
+			<!--六楼-->
+			<div class="ONE_F">
+				<a name="LIULOU"></a>
+				<div class="ONE_F_beader">
+
+					<p><span style="color: #FF4400;">6F</span>服装鞋包</p>
+				</div>
+
+				<div class="ONE_F_header_right">
+					<ul>
+						<li>
+							<a href="#">大牌</a>
+						</li>
+						<li>
+							<a href="#">男装</a>
+						</li>
+						<li>
+							<a href="#">女装</a>
+						</li>
+						<li>
+							<a href="#">鞋靴</a>
+						</li>
+						<li>
+							<a href="#">箱包</a>
+						</li>
+						<li>
+							<a href="#">内衣配饰</a>
+						</li>
+						<li>
+							<a href="#">珠宝首饰</a>
+						</li>
+						<li>
+							<a href="#">奢饰礼品</a>
+						</li>
+						<li>
+							<a href="#">奢华腕表</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ONE_F_main">
+					<div class="ONE_F_main_left">
+						<div class="ONE_F_main_left_left">
+							<img src="../statics/img/img-flash-1.jpg" />
+							<img src="../statics/img/flash-bottom.jpg" />
+						</div>
+						<div class="ONE_F_main_left_right">
+							<img src="../statics/img/table-1.jpg" />
+							<img src="../statics/img/LTloopshow-1.jpg" />
+							<img src="../statics/img/table-8.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_right">
+						<div class="ONE_F_main_right_left">
+							<img src="../statics/img/table-2.jpg" />
+							<img src="../statics/img/table-4.jpg" />
+							<img src="../statics/img/table-6.jpg" />
+							<img src="../statics/img/table-9.jpg" />
+						</div>
+						<div class="ONE_F_main_right_right">
+							<img src="../statics/img/table-3.jpg" />
+							<img src="../statics/img/table-5.jpg" />
+							<img src="../statics/img/table-7.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_bottom">
+						<img src="../statics/img/onefloor-bottom-1.jpg" />
+						<img src="../statics/img/onefloor-bottom-2.jpg" />
+						<img src="../statics/img/onefloor-bottom-3.jpg" />
+						<img src="../statics/img/onefloor-bottom-4.jpg" />
+						<img src="../statics/img/onefloor-bottom-5.jpg" />
+						<img src="../statics/img/onefloor-bottom-6.jpg" />
+						<img src="../statics/img/onefloor-bottom-7.jpg" />
+						<img src="../statics/img/onefloor-bottom-8.jpg" />
+						<img src="../statics/img/onefloor-bottom-9.jpg" />
+						<img src="../statics/img/onefloor-bottom-10.jpg" />
+					</div>
+				</div>
+			</div>
+			<!--七楼-->
+			<div class="ONE_F">
+				<a name="QILOU"></a>
+				<div class="ONE_F_beader">
+					<p><span style="color: #FF4400;">7F</span>个肤美妆</p>
+				</div>
+
+				<div class="ONE_F_header_right">
+					<ul>
+						<li>
+							<a href="#">大牌</a>
+						</li>
+						<li>
+							<a href="#">男装</a>
+						</li>
+						<li>
+							<a href="#">女装</a>
+						</li>
+						<li>
+							<a href="#">鞋靴</a>
+						</li>
+						<li>
+							<a href="#">箱包</a>
+						</li>
+						<li>
+							<a href="#">内衣配饰</a>
+						</li>
+						<li>
+							<a href="#">珠宝首饰</a>
+						</li>
+						<li>
+							<a href="#">奢饰礼品</a>
+						</li>
+						<li>
+							<a href="#">奢华腕表</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ONE_F_main">
+					<div class="ONE_F_main_left">
+						<div class="ONE_F_main_left_left">
+							<img src="../statics/img/img-flash-2.jpg" />
+							<img src="../statics/img/flash-bottom.jpg" />
+						</div>
+						<div class="ONE_F_main_left_right">
+							<img src="../statics/img/table-1.jpg" />
+							<img src="../statics/img/LTloopshow-1.jpg" />
+							<img src="../statics/img/table-8.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_right">
+						<div class="ONE_F_main_right_left">
+							<img src="../statics/img/table-2.jpg" />
+							<img src="../statics/img/table-4.jpg" />
+							<img src="../statics/img/table-6.jpg" />
+							<img src="../statics/img/table-9.jpg" />
+						</div>
+						<div class="ONE_F_main_right_right">
+							<img src="../statics/img/table-3.jpg" />
+							<img src="../statics/img/table-5.jpg" />
+							<img src="../statics/img/table-7.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_bottom">
+						<img src="../statics/img/onefloor-bottom-1.jpg" />
+						<img src="../statics/img/onefloor-bottom-2.jpg" />
+						<img src="../statics/img/onefloor-bottom-3.jpg" />
+						<img src="../statics/img/onefloor-bottom-4.jpg" />
+						<img src="../statics/img/onefloor-bottom-5.jpg" />
+						<img src="../statics/img/onefloor-bottom-6.jpg" />
+						<img src="../statics/img/onefloor-bottom-7.jpg" />
+						<img src="../statics/img/onefloor-bottom-8.jpg" />
+						<img src="../statics/img/onefloor-bottom-9.jpg" />
+						<img src="../statics/img/onefloor-bottom-10.jpg" />
+					</div>
+				</div>
+			</div>
+			<!--八楼-->
+			<div class="ONE_F">
+				<a name="BALOU"></a>
+				<div class="ONE_F_beader">
+					<p><span style="color: #FF4400;">8F</span>手机通讯</p>
+				</div>
+
+				<div class="ONE_F_header_right">
+					<ul>
+						<li>
+							<a href="#">大牌</a>
+						</li>
+						<li>
+							<a href="#">男装</a>
+						</li>
+						<li>
+							<a href="#">女装</a>
+						</li>
+						<li>
+							<a href="#">鞋靴</a>
+						</li>
+						<li>
+							<a href="#">箱包</a>
+						</li>
+						<li>
+							<a href="#">内衣配饰</a>
+						</li>
+						<li>
+							<a href="#">珠宝首饰</a>
+						</li>
+						<li>
+							<a href="#">奢饰礼品</a>
+						</li>
+						<li>
+							<a href="#">奢华腕表</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ONE_F_main">
+					<div class="ONE_F_main_left">
+						<div class="ONE_F_main_left_left">
+							<img src="../statics/img/img-flash-3.jpg" />
+							<img src="../statics/img/flash-bottom.jpg" />
+						</div>
+						<div class="ONE_F_main_left_right">
+							<img src="../statics/img/table-1.jpg" />
+							<img src="../statics/img/LTloopshow-1.jpg" />
+							<img src="../statics/img/table-8.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_right">
+						<div class="ONE_F_main_right_left">
+							<img src="../statics/img/table-2.jpg" />
+							<img src="../statics/img/table-4.jpg" />
+							<img src="../statics/img/table-6.jpg" />
+							<img src="../statics/img/table-9.jpg" />
+						</div>
+						<div class="ONE_F_main_right_right">
+							<img src="../statics/img/table-3.jpg" />
+							<img src="../statics/img/table-5.jpg" />
+							<img src="../statics/img/table-7.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_bottom">
+						<img src="../statics/img/onefloor-bottom-1.jpg" />
+						<img src="../statics/img/onefloor-bottom-2.jpg" />
+						<img src="../statics/img/onefloor-bottom-3.jpg" />
+						<img src="../statics/img/onefloor-bottom-4.jpg" />
+						<img src="../statics/img/onefloor-bottom-5.jpg" />
+						<img src="../statics/img/onefloor-bottom-6.jpg" />
+						<img src="../statics/img/onefloor-bottom-7.jpg" />
+						<img src="../statics/img/onefloor-bottom-8.jpg" />
+						<img src="../statics/img/onefloor-bottom-9.jpg" />
+						<img src="../statics/img/onefloor-bottom-10.jpg" />
+					</div>
+				</div>
+			</div>
+			<!--九楼-->
+			<div class="ONE_F">
+				<a name="JIULOU"></a>
+				<div class="ONE_F_beader">
+					<p><span style="color: #FF4400;">9F</span>户外运动</p>
+				</div>
+
+				<div class="ONE_F_header_right">
+					<ul>
+						<li>
+							<a href="#">大牌</a>
+						</li>
+						<li>
+							<a href="#">男装</a>
+						</li>
+						<li>
+							<a href="#">女装</a>
+						</li>
+						<li>
+							<a href="#">鞋靴</a>
+						</li>
+						<li>
+							<a href="#">箱包</a>
+						</li>
+						<li>
+							<a href="#">内衣配饰</a>
+						</li>
+						<li>
+							<a href="#">珠宝首饰</a>
+						</li>
+						<li>
+							<a href="#">奢饰礼品</a>
+						</li>
+						<li>
+							<a href="#">奢华腕表</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ONE_F_main">
+					<div class="ONE_F_main_left">
+						<div class="ONE_F_main_left_left">
+							<img src="../statics/img/img-flash-4.jpg" />
+							<img src="../statics/img/flash-bottom.jpg" />
+						</div>
+						<div class="ONE_F_main_left_right">
+							<img src="../statics/img/table-1.jpg" />
+							<img src="../statics/img/LTloopshow-1.jpg" />
+							<img src="../statics/img/table-8.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_right">
+						<div class="ONE_F_main_right_left">
+							<img src="../statics/img/table-2.jpg" />
+							<img src="../statics/img/table-4.jpg" />
+							<img src="../statics/img/table-6.jpg" />
+							<img src="../statics/img/table-9.jpg" />
+						</div>
+						<div class="ONE_F_main_right_right">
+							<img src="../statics/img/table-3.jpg" />
+							<img src="../statics/img/table-5.jpg" />
+							<img src="../statics/img/table-7.jpg" />
+						</div>
+					</div>
+
+					<div class="ONE_F_main_bottom">
+						<img src="../statics/img/onefloor-bottom-1.jpg" />
+						<img src="../statics/img/onefloor-bottom-2.jpg" />
+						<img src="../statics/img/onefloor-bottom-3.jpg" />
+						<img src="../statics/img/onefloor-bottom-4.jpg" />
+						<img src="../statics/img/onefloor-bottom-5.jpg" />
+						<img src="../statics/img/onefloor-bottom-6.jpg" />
+						<img src="../statics/img/onefloor-bottom-7.jpg" />
+						<img src="../statics/img/onefloor-bottom-8.jpg" />
+						<img src="../statics/img/onefloor-bottom-9.jpg" />
+						<img src="../statics/img/onefloor-bottom-10.jpg" />
+					</div>
+				</div>
+			</div>
+			<div class="TITLE">
+				<ul id="ul">
+					<li>1F<span><a href="#YILOU">服装鞋包</a></span></li>
+					<li>2F<span><a href="#ERLOU">个肤美妆</a></span></li>
+					<li>3F<span><a href="#SANLOU">手机通讯</a></span></li>
+					<li>4F<span><a href="#SILOU">户外运动</a></span></li>
+					<li>5F<span><a href="#WULOU">电脑数码</a></span></li>
+					<li>6F<span><a href="#LIULOU">服装鞋包</a></span></li>
+					<li>7F<span><a href="#QILOU">个肤美妆</a></span></li>
+					<li>8F<span><a href="#BALOU">手机通讯</a></span></li>
+					<li>9F<span><a href="#JIULOU">户外运动</a></span></li>
+				</ul>
+			</div>
+		<div class="BOTTOM">
+			<div class="BOTTOM_TOP">
+				<ul>
+					<li><a href="#">关于我们</a><span>|</span></li>
+					<li><a href="#">联系我们</a><span>|</span></li>
+					<li><a href="#">联系客服</a><span>|</span></li>
+					<li><a href="#">合作招商</a><span>|</span></li>
+					<li><a href="#">商家帮助</a><span>|</span></li>
+					<li><a href="#">营销中心</a><span>|</span></li>
+					<li><a href="#">手机京东</a><span>|</span></li>
+					<li><a href="#">友情链接</a><span>|</span></li>
+					<li><a href="#">销售联盟</a><span>|</span></li>
+					<li><a href="#">京东社区</a><span>|</span></li>
+					<li><a href="#">风险监测</a><span>|</span></li>
+					<li><a href="#">隐私政策</a><span>|</span></li>
+					<li><a href="#">京东公益</a><span>|</span></li>
+					<li><a href="#">English Site</a><span>|</span></li>
+					<li><a href="#">Media & IR</a><span>|</span></li>
+				</ul>
+			</div>			
+		</div>
+		</div>
+	</body>
+<script type="text/javascript">
+var fl=document.getElementsByClassName('ONE_F');
+var ul=document.getElementById("ul");
+var li=ul.getElementsByTagName('li');
+var span=ul.getElementsByTagName("span");
+window.addEventListener("scroll",function(){
+    var scrollTop=document.documentElement.scrollTop||window.pageYOffset||document.body.scrollTop;
+    if(scrollTop>=1600){
+        ul.parentNode.style.display="block";
+    }
+    if(scrollTop<1600){
+        ul.parentNode.style.display="none";
+    }
+    for(i in fl){
+        if(fl[i].offsetTop-scrollTop>-650){
+            that=span[i];
+            for(var j=0;j<span.length;j++){
+                if (span[j]!=that) {
+                    span[j].style.display="none"
+                }
+            }
+            span[i].style.display="block";
+            return false
+        }
+    }
+},0)
+ 
+ 
+for(var i=0;i<li.length;i++){
+    (function(index){
+        li[index].addEventListener("mouseover",function(){
+            span[index].style.display="block";
+        },false)
+    })(i)
+}
+for(var i=0;i<li.length;i++){
+    (function(index){
+        li[index].addEventListener("click",function(){
+            span[index].style.display="block";
+            document.body.scrollTop=index*600+600;
+        },false)
+    })(i)
+}
+for(var i=0;i<li.length;i++){
+    (function(index){
+        li[index].addEventListener("mouseout",function(){
+            span[index].style.display="none";
+        },false)
+    })(i)
+}
+</script>
+<script type="text/javascript">
+		$(function() {
+			/*点击按钮弹框和背景层出现*/
+			$('.btnnn').click(function() {
+				$('.layer').show();
+				$('.login').show();
+				center();
+			});
+			/*当窗口大小改变时弹框仍然位于中央*/
+			$(window).resize(function() {
+				center();
+			});
+			/*点击弹框右上角关闭按钮关闭弹框和背景层*/
+			$("#head span").click(function() {
+				$(".layer").hide();
+				$(".login").hide();
+			});
+			/*使弹框位于中央*/
+			function center() {
+				var left = ($(window).width() - $(".login").width()) / 2;
+				var top = ($(window).height() - $(".login").height()) / 2;
+				$('.login').css({
+					'left': left,
+					'top': top
+				});
+			}
+
+		});
+
+		window.onload = function() {
+			var title = document.getElementById('head');
+			move(title);
+		}
+		/*封装移动函数*/
+		function move(obj) {
+			var onOff = false;
+			var l = 0,
+				t = 0,
+				x = 0,
+				y = 0;
+			var parent = obj.parentNode;
+
+			obj.onmousedown = function(event) {
+				var e = event || window.event;
+				x = e.clientX;
+				y = e.clientY;
+				l = parseInt(parent.offsetLeft);
+				t = parseInt(parent.offsetTop);
+				onOff = true;
+				obj.style.cursor = "move"; //此时鼠标形状为可移动手势
+				document.onmousemove = function(event) {
+					if(onOff) {
+						var e = event || window.event;
+						parent.style.left = l + e.clientX - x + 'px';
+						parent.style.top = t + e.clientY - y + 'px';
+
+					}
+				}
+				document.onmouseup = function() {
+					if(onOff) {
+						onOff = false;
+					}
+				};
+
+			};
+		}
+	</script>
+</html>

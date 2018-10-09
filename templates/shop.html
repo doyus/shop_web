@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="\static\css\shop_detail.css">
+</head>
+<style type="text/css">
+    *{
+        font-size:18px;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="h_top">
+                <ul class="aaa left">
+                    <li>京东首页</li>
+                    <li>北京</li>
+
+                </ul>
+                <ul class="aaa right">
+                    <li>我的订单</li>
+                    <li>我的京东</li>
+                    <li>京东会员</li>
+                    <li>企业采购</li>
+                    <li>客户服务</li>
+                    <li>网站导航</li>
+                    <li>手机京东</li>
+                </ul>
+            </div>
+            <div class="h_mid">
+                <div class="h_mid_top">
+                    <div class="h_left1">
+                        <img src="\static\img\zong.png" alt="">
+                        <select>
+                        <option value="">全部分类</option>
+                        </select>
+                    </div>
+                    <div class="h_mid1">
+                        <input type="text" name=""><span style="padding:9px;width:53px;height:33px;background-color:red;color:white;">搜全栈</span><span style="padding:9px;width:53px;height:33px;background-color:#7F4E4E;color:white;">搜本店</span>
+                    </div>
+                   <!--  <div class="h_right1">
+                        <p>我的购物车</p>
+                    </div> -->
+
+                </div>
+
+            </div>
+            <div class="h_bot"></div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="content">
+            <div class="content_left">
+                <div class="tu"><img src='{{ img }}' alt="" /></div>
+                <div class="ztu">
+                    <p style="color:#666;text-align: center;margin:10px;"><span style="color:red;background-color:green;">新品</span> {{ name }}</p>
+                    <p style="color:red;text-align: center;margin:10px;font-size:12px;">{{ des }}<a href="">评价晒单赢京豆</a></p>
+                    <div style="clear:both;"></div>
+                <div id="goumai">
+            <form action="/page1/" method="post" accept-charset="utf-8">
+                单价为<input type="text" value="{{ count }}" name="money"/><br>
+                数量为<input type="text" name="num" value="1"><br>
+                <input type="submit"  value="购买" style="background-color:#CC2121;color:white;margin-top: 5px;padding-top:3px;padding-bottom: 3px;border: 1px solid grey; border-radius:5px;padding-left:4px;padding-right: 4px;">
+                <a href="http://localhost:8000/add_car?idd={{ id }}&own={{ count }}" style="background-color:#CC2121;color:white;margin-top: 5px;padding-top:3px;padding-bottom: 3px;border: 1px solid grey; border-radius:5px;padding-left:4px;padding-right: 4px;">添加到购物车</a>
+            </form>
+
+
+
+            </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</body>
+</html>

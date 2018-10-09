@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    border:0;
+}
+ol, ul ,li a,{list-style: none;text-decoration:none;}
+table{
+    border-collapse: collapse;
+    margin: 50px auto;
+    width: 1000px;
+    height: 600px;
+}
+table tr{
+    border-bottom: 1px solid grey;
+}
+table td{
+    text-align: center;
+    background-color:
+    border-bottom: 1px solid grey;
+}

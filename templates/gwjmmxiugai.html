@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>确认密码</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .Logain{
+            position: fixed;
+            width: 30%;
+            height: 100px;
+            margin:220px 0 0 35% ;
+        }
+        .body{
+            background: #f0f0f0;
+        }
+        .ppp{
+            font-family: 方正兰亭超细黑简体;
+            font-size: 25px;
+            color: #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+<div class="Logain">
+        	<form method="post" action="gwjmm3">
+			<table class="table table-condensed">
+                <input type="hidden" name = 'username'  value="{{ list1.username }}">
+			<tr class="success">
+                <p class="ppp">您正在修改用户：（{{ list1.username }}）的密码</p>
+			</tr>
+			<tr class="active">
+				<td>密码：</td>
+				<td class="text-left">
+					<input type="password" class="form-control" name="password" placeholder="请输入密码"/>
+				</td>
+			</tr>
+			<tr class="warning">
+				<td>确认密码：</td>
+				<td class="text-left">
+					<input type="password" class="form-control" name="password" placeholder="请再次输入密码"/>
+				</td>
+			</tr>
+
+			<br>
+			<tr class="danger">
+				<td class="text-center" colspan="2">
+				<input class="btn-xs" type="submit" value="确认修改">
+
+				</td>
+			</tr>
+		</table>
+		</form>
+
+		</div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        table{
+            text-align: center;
+            margin: 300px 0 0 40%;
+        }
+    </style>
+</head>
+<body>
+
+<form method="post" action="gyxiugai2">
+    <table>
+        <tr>
+            <td>用户名：</td>
+            <td><input type="text" name="username" value="{{ list1.username }}"></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="text" name="password" value="{{ list1.password }}"></td>
+        </tr>
+        <tr>
+            <td>姓名：</td>
+            <td><input type="text" name="name" value="{{ list1.name }}"></td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td><input type="text" name="sex" value="{{ list1.sex }}"></td>
+        </tr>
+        <tr>
+            <td>电话号码：</td>
+            <td><input type="text" name="phone" value="{{ list1.phone }}"></td>
+        </tr>
+        <tr>
+            <td>收货地址：</td>
+            <td><input type="text" name="shouhuo" value="{{ list1.shouhuo }}"></td>
+        </tr>
+        <tr>
+            <td>验证密保：</td>
+            <td><input type="text" name="passwordd" value="{{ list1.passwordd }}"></td>
+        </tr>
+        <tr>
+            <td>id:</td>
+            <td><input type="text" name="id" value="{{ list1.id }}"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="提交申请"></td>
+        </tr>
+
+    </table>
+
+
+
+
+
+</form>
+
+
+
+</body>
+</html>

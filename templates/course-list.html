@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>查询列表</title>
+    <style type="text/css">
+        .table th, .table td {
+text-align: center;
+vertical-align: middle!important;
+}
+    </style>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<center>
+    <div>
+        <h1>您的查询结果如下</h1>
+    </div>
+    <table border="1" width="850" class="table table-condensed" >
+
+
+
+                <tbody>
+                <!-- <tr>
+                        <td>产品名称</td><td></td><td>年龄</td><td>密码</td>
+                </tr> -->
+                    {% for i in list %}
+
+                        <tr class="success">
+                        <td contenteditable="true" name='age'><img src="{{ i.id3 }}"></td>
+                        <td contenteditable="true" name='name'>{{ i.id1 }}</td>
+                        <td contenteditable="true" name='sex'>{{ i.id2 }}</td>
+                        <td contenteditable="true" name='pwd'>{{ i.id4 }}</td>
+                        <td><a href="http://localhost:8000/goumai?idd={{ i.id }}">直接购买</a></td>
+                        <td><a href="http://localhost:8000/add_car?idd={{ i.id }}&own={{ kname }}">添加到购物车{{ t }}</a></td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </center>
+</body>
+</html>

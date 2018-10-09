@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>修改</title>
+</head>
+<body>
+    <style type="text/css">
+        div {
+            position:relative;
+            display:table-cell;
+            margin:0 auto;
+            width: 1200px;
+            height:600px;
+            background:
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
+background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+background-color: #840b2a;
+text-align:center;
+color:white;
+        }
+        div form input{
+            vertical-align:center;
+            border:1px solid grey;
+            height: 40px;
+            width: 400px;
+            border-radius:6px;
+            margin-top:10px;
+            text-align:center;
+            color:red;
+        }
+    </style>
+
+<center>
+    <div>
+    <h3 style="color:red;">我的京东</h3>
+     <form action="change" method="post" accept-charset="utf-8">
+            {% csrf_token %}
+
+                 {% for i in list %}
+
+
+                        <input type="text" name="id" value="{{ i.id }}"  style="visibility:hidden;"><br>
+                        用户名：&nbsp;&nbsp;&nbsp;<input type="text" name="username" value="{{ i.username }}"><br>
+                        余额：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="balance" value="{{ i.balance }}"><br>
+                        收货地址：<input type="text" name="addr" value="{{ i.addr }}"><br>
+                        手机号：&nbsp;&nbsp;&nbsp;<input type="text" name="tel" value="{{ i.tel }}"><br>
+                        性别：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="sex" value="{{ i.sex }}"><br>
+                        密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pwd" value="{{ i.pwd }}"><br>
+
+                 {% endfor %}
+                        点击修改：<input type="submit" value="提交修改">
+
+    </form>
+</div>
+
+</center>
+
+</body>
+</html>

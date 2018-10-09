@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>管理员内部页面</title>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .title{
+                color: #ff4400;
+                padding: 20px 0 0 0;
+                text-align: center;
+
+                font-family:楷体;
+                font-size: 25px;
+            }
+            .HEADER{
+                width: 100%;
+                height: 80px;
+                color: #ff4400;
+                font-family: "方正兰亭超细黑简体";
+                font-size: 30px;
+                text-align: center;
+                padding: 30px 0 0 0 ;
+                background-color: #D3D3D3;
+            }
+			.main {
+				width: 100%;
+				height: 750px;
+			}
+            .main-left{
+                border: #D3D3D3 1px solid;
+                float: left;
+                margin: 0 0 0 5%;
+                width: 40%;
+                height: 380px;
+            }
+            .main-right{
+                border: #D3D3D3 1px solid;
+                float: left;
+                margin: 0 3% 0 10px;
+                width: 50%;
+                height: 380px;
+            }
+            .main_bottom{
+                border: #D3D3D3 1px solid;
+                {#width: ;#}
+            }
+            #msg{
+                margin: 0 0 0 20%;
+                display: none;
+                position: absolute;
+                top:470px;
+                left: 0;
+                width: 700px;
+                height: auto;
+            }
+            .imgdiv{
+                width: 60px;
+                height: 60px;
+            }
+            .imgdiv>img{
+                width: 100%;
+                height: 100%;
+            }
+            .msga:hover #msg{
+                display: block;
+            }
+            .add_shangping{
+                margin: 0 0 0 190px;
+            }
+		</style>
+	</head>
+
+	<body>
+    <div class="HEADER">
+        <div style="float: left; margin: 0 0 0 45%">BOSS模式！</div>
+        <div style="width: 200px;height: 50px; float: right;">
+                    <script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_wh.js">
+                    </script>
+
+
+        </div>
+    </div>
+		<div class="main">
+			<div class="main-left">
+                <div class="title">
+                    商品管理
+                    <a style="position: absolute;top: 40px; left: 80%; " href="tuichu">退出登录</a>
+                </div>
+				<form action="xinzeng" method="POST">
+					{# {% csrf_token %}#}
+                    {# <input type="submit" value="新增">#}
+                    {# <input type="button" value="查询" onclick="window:location.href= 'chaxun'">#} {# <input type="button" value="修改" onclick="window:location.href= 'xiugai'">#}
+					<hr>
+					<table border='1' class="table">
+						<tr style="text-align: center">
+							<td class="success">商品编号</td>
+							<td class="active">商品名称</td>
+							<td class="info">商品描述</td>
+							<td class="warning">商品价格</td>
+                            <td class="danger" colspan="2">执行操作</td>
+
+
+						</tr>
+						{% for user in list %}
+						<tr>
+							<td class="success">{{ user.id }}</td>
+							<td class="active">{{ user.name }}</td>
+							<td class="info">{{ user.img }}</td>
+							<td class="warning" style="color: #ff4400">￥{{ user.num }}</td>
+
+							<td class="danger">
+								<a href="gsshanchu?num={{ user.id }}">删除</a>
+							</td>
+							<td class="danger">
+								<a href="gsxiugai1?num={{ user.id }}">修改</a>
+							</td>
+						</tr>
+						{% endfor %}
+                        总记录数:{{ queryset }} 总页数:{{ num_page }} 当前页：{{ cur_page1 }} {% if cur_page1 == 1 %} 上一页 {% else %}
+						<a href="gdenglu2?page={{ d_qianyi }}&pagee={{ cur_page11 }}">上一页</a>
+						{% endif %} {% if cur_page1 == num_page %} 下一页 {% else %}
+						<a href="gdenglu2?page={{ d_houyi }}&pagee={{ cur_page11 }}">下一页</a>
+						{% endif %}
+                        <a class="add_shangping" href="add_shangping1">新增商品</a>
+					</table>
+
+				</form>
+			</div>
+
+        <div class="main-right">
+                <div class="title">
+                    用户管理
+                </div>
+				<form action="xinzeng" method="POST">
+					{# {% csrf_token %}#}
+                    {# <input type="submit" value="新增">#}
+                    {# <input type="button" value="查询" onclick="window:location.href= 'chaxun'">#} {# <input type="button" value="修改" onclick="window:location.href= 'xiugai'">#}
+					<hr>
+					<table border='1' class="table">
+						<tr style="text-align: center">
+							<td class="success">用户名</td>
+							<td class="active">账户余额</td>
+							<td class="info">收货地址</td>
+							<td class="warning">电话</td>
+                            <td class="success">姓名</td>
+							<td class="active">性别</td>
+                            <td class="info">密码</td>
+                            <td class="danger" colspan="2">执行操作</td>
+						</tr>
+						{% for user1 in list1 %}
+						<tr>
+
+                            <td class="success">
+                            <a class="msga">{{ user1.username }}
+                            <div id="msg">
+                                {#购物车#}
+
+                                <table border='1' class="table">
+                                    <td class="active">商品名称</td>
+                                    <td class="info">商品描述</td>
+                                    <td class="warning">商品图片</td>
+                                    <td class="info">商品单价</td>
+                                    <td class="warning">联系方式</td>
+                                    <td class="info">收货地址</td>
+                                    {% for foo in user1.list9 %}
+                                    <tr>
+                                        <td class="active">{{ foo.sname }}</td>
+                                        <td class="info">{{ foo.simg }}</td>
+                                        <td class="warning"><div class="imgdiv"><img src="{{ foo.sspeck }}" alt="{{ foo.name }}"></div></td>
+                                        <td class="info">￥{{ foo.sd }}</td>
+                                    <td class="info">{{ user1.phone }}</td>
+                                    <td class="info">{{ user1.shouhuo }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </table>
+                            </div>
+                            </a>
+                            </td>
+							<td class="active">{{ user1.password }}</td>
+							<td class="info">{{ user1.shouhuo }}</td>
+							<td class="warning">{{ user1.phone }}</td>
+							<td class="info">{{ user1.name }}</td>
+                            <td class="active">{{ user1.sex }}</td>
+							<td class="info">{{ user1.passwordd }}</td>
+
+
+							<td class="danger">
+								<a href="gsyonghu?id={{ user1.id }}">拉黑</a>
+							</td>
+							<td class="danger">
+								<a href="gyxiugai1?id={{ user1.id }}">修改</a>
+							</td>
+
+						</tr>
+						{% endfor %} 总记录数:{{ querysett }} 总页数:{{ num_pagee }} 当前页：{{ cur_page11 }} {% if cur_page11 == 1 %} 上一页 {% else %}
+						<a href="gdenglu2?pagee={{ d_qianyii }}&page={{ cur_page1 }}">上一页</a>
+						{% endif %} {% if cur_page11 == num_pagee %} 下一页 {% else %}
+						<a href="gdenglu2?pagee={{ d_houyii }}&page={{ cur_page1 }}">下一页</a>
+						{% endif %}
+					</table>
+				</form>
+			</div>
+		</div>
+
+
+
+
+
+	</body>
+<script>
+			$(function(){
+				$(#msg).on({
+					mouseover : function(){
+						$(this).css("color","red") ;
+					} ,
+					mouseout : function(){
+						$(this).css("color","green") ;
+					}
+				}) ;
+			}) ;
+		</script>
+
+</html>

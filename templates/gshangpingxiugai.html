@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .imgdiv{
+            width: 60px;
+            height: 60px;
+        }
+        .imgdiv>img{
+            width: 100%;
+            height: 100%;
+        }
+        table{
+            margin: 300px 0 0 40%;
+            text-align: left;
+        }
+
+    </style>
+
+</head>
+<body>
+<form method="post" action="gsxiugai2">
+    <table>
+    <input type="hidden" name="id" value="{{ list1.id }}">
+        <tr>
+            <td>商品:</td>
+            <td><div class="imgdiv"><img src="{{ list1.speck }}" alt="手机"></div></td>
+        </tr>
+        <tr>
+            <td>商品编号：</td>
+            <td><input type="text" name="num" value="{{ list1.id }}"></td>
+        </tr>
+        <tr>
+            <td>商品名称：</td>
+            <td><input type="text" name="name" value="{{ list1.name }}"></td>
+        </tr>
+        <tr>
+            <td>商品描述：</td>
+            <td><input type="text" name="speck" value="{{ list1.img }}"></td>
+        </tr>
+        <tr>
+            <td>商品价格：</td>
+            <td><input type="text" name="manage" value="{{ list1.num }}"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="提交申请"></td>
+
+        </tr>
+
+
+
+
+
+
+    </table>
+
+</form>
+
+
+
+
+</body>
+</html>

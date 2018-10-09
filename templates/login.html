@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>注册</title>
+    <script type="text/javascript" src="\static\zhuce.js"></script>
+    <link rel="stylesheet" type="text/css" href="\static\css\zhuce.css">
+</head>
+<body>
+    <div class="head">
+        <div class="left">
+            <img src="\static\img\zong.png" alt=""><span style="display:block;float:right;margin-top: 10px;margin-left:5px;">欢迎注册！</span>
+
+        </div>
+        <div class="right">
+            已有账号？<a href="sign" style="color:red;text-decoration: none;">请登录></a>
+        </div>
+
+    </div>
+    <div style="clear:both;"></div>
+    <div class="content">
+        <span class="span1">1</span>
+        <span class="span3">.................<span style="position: absolute;
+    color:grey;
+    top:4px;
+    text-align:center;
+    line-height: 30px;">></span></span>
+        <span class="span2">2</span>
+        <span class="span5">.................<span style="position: absolute;color:grey;top:4px;text-align:center;line-height: 30px;">></span></span>
+        <span class="span4">3</span>
+    </div>
+    <div style="clear:both;"></div>
+    <center>
+    <form action="regist" method="post" id="form" >
+
+        <input type="text" name="tel" placeholder="请输入手机号" required="true" missingMessage="必须填写">
+        <br>
+        <input type="text" name="name" placeholder="请输入真实姓名" required="true" missingMessage="必须填写">
+        <br>
+        <input type="text" name="username" placeholder="请输入用户名" required="true" missingMessage="必须填写">
+        <br>
+        <input type="password" name="pwd" placeholder="请输入密码" id="pwd1" required="true" missingMessage="必须填写">
+        <br>
+        <input type="password" name="pwd" placeholder="请输入密码" id="pwd2" onkeyup="validate()" required="true" missingMessage="必须填写">
+        <br>
+        <input type="text" name="sex" placeholder="请输入性别" missingMessage="必须填写">
+        <br>
+        <input type="submit" name="" value="提交" style="width:200px;background-color: red;color:white;"><br>
+        <span id="tishi"></span>
+    </form>
+
+
+    </center>
+     <script>
+          function validate() {
+              var pwd1 = document.getElementById("pwd1").value;
+              var pwd2 = document.getElementById("pwd2").value;
+    // <!-- 对比两次输入的密码 -->
+              if(pwd1 == pwd2) {
+                  document.getElementById("tishi").innerHTML="<font color='green'>两次密码相同,可以注册</font>";
+                  document.getElementById("submit").disabled = false;
+              }
+              else {
+                  document.getElementById("tishi").innerHTML="<font color='red'>两次密码不相同</font>";
+                document.getElementById("submit").disabled = true;
+              }
+          }
+      </script>
+</body>
+</html>
